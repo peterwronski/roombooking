@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookARoom@RGU</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<script>
+    //SOURCE: http://stackoverflow.com/questions/14667829/how-to-create-a-sticky-navigation-bar-that-becomes-fixed-to-the-top-after-scroll -->
+    $(document).ready(function() {
+        var img = document.getElementById('logo');
+        var height = img.clientHeight;
+        $(window).scroll(function () {
+            //if you hard code, then use console
+            //.log to determine when you want the
+            //nav bar to stick.
+            console.log($(window).scrollTop())
+            if ($(window).scrollTop() > height+1 ) {
+                $('#nav_bar').addClass('navbar-fixed-top');
+            }
+            if ($(window).scrollTop() < height ) {
+                $('#nav_bar').removeClass('navbar-fixed-top');
+            }
+        });
+    });
+</script>
+
+
+
+<?php session_start(); ?>
+<div id="logobg">
+<img src="img/logoblack.png" width="60%" height="60%" class="center-block img-responsive" id="logo"/>
+</div>
+<nav id="nav_bar" class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           <!-- <a class="navbar-brand" href="index.php"><img src="img/logowhite.png" width="250px"/></a> -->
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutproduct.php">What is it?</a></li>
+                <li><a href="aboutus.php">Who are we?</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <?php
+                if (isset($_SESSION['userSession'])&&(($_SESSION['userSession']) == true)) {
+                    echo'<li><a href="useraccount.php">Welcome ' .$_SESSION['userSession'].'</a></li>
+                <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Log out</a></li>';
+                }
+                else{
+                    echo'<li><a href="loginpg.php"><span class="glyphicon glyphicon-user"></span> Sign Up / Login</a></li>';
+                };
+                ?>
+            </ul>
+        </div>
+    </div>
+</nav>

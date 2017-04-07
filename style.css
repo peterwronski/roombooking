@@ -1,0 +1,16 @@
+body{
+    background: url('img/campus.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#logobg{
+    background-color:rgba(255,255,255,0.7) ;
+}
+
+.contentbox{
+    background-color:rgba(255,255,255,0.7) ;
+}

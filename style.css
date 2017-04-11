@@ -14,3 +14,16 @@ body{
 .contentbox{
     background-color:rgba(255,255,255,0.7) ;
 }
+
+hr {
+    size: 5px;
+    width:80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+h1{
+    color: white;
+    font-family: SolexRegular, sans serif;
+    text-align: center;
+}

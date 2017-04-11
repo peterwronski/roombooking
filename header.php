@@ -33,9 +33,33 @@
     });
 </script>
 
+<script>
+    // handle links with @href started with '#' only
+    $(document).on('click', 'a[href^="#"]', function(e) {
+        // target element id
+        var id = $(this).attr('href');
+
+        // target element
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+
+        // prevent standard hash navigation (avoid blinking in IE)
+        e.preventDefault();
+
+        // top position relative to the document
+        var pos = $id.offset().top;
+
+        // animated top scrolling
+        $('body, html').animate({scrollTop: pos});
+    });
+</script>
+
 
 
 <?php session_start(); ?>
+<div id="top"></div>
 <div id="logobg">
 <img src="img/logoblack.png" width="60%" height="60%" class="center-block img-responsive" id="logo"/>
 </div>
@@ -51,7 +75,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="aboutproduct.php">What is it?</a></li>
                 <li><a href="aboutus.php">Who are we?</a></li>
             </ul>
@@ -64,7 +88,7 @@
                 <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Log out</a></li>';
                 }
                 else{
-                    echo'<li><a href="loginpg.php"><span class="glyphicon glyphicon-user"></span> Sign Up / Login</a></li>';
+                    echo'<li><a href="#loginpage"><span class="glyphicon glyphicon-user"></span> Sign Up / Login</a></li>';
                 };
                 ?>
             </ul>

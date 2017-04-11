@@ -11,7 +11,7 @@ require_once('dbconnect.php');
 
 
 
-/*
+
 // To protect MySQL injection (more detail about MySQL injection)
 $studentid = stripslashes($studentid);
 $password = stripslashes($password);
@@ -34,6 +34,6 @@ if (password_verify($password, $row['password']) && $count==1) {
      <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Invalid Username or Password !
     ";
 
-} */
+} 
 $conn->close();
 ?>

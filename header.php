@@ -76,8 +76,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="#top">Home</a></li>
-                <li><a href="aboutproduct.php">What is it?</a></li>
-                <li><a href="aboutus.php">Who are we?</a></li>
+
             </ul>
 
 

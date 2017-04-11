@@ -19,21 +19,28 @@ foreach ($_SERVER as $key => $value) {
 //If we are not on Azure
 if (!$connectstr_dbhost) {
     $connectstr_dbhost = 'localhost';
-    $connectstr_dbname = 'roombooking';
+    $connectstr_dbname = 'reqlocaldb';
     $connectstr_dbusername = 'root';
-    $connectstr_dbpassword = '';
+    $connectstr_dbpassword = 'Zppsit0!';
 }
-try{
-    //create an instance of the PDO class with the required parameters
-    $db = new PDO($dsn, $username, $password);
 
-    //set pdo error mode to exception
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Build strings for creating PHP Database Object - PDO
+$dsn = "mysql:host=$connectstr_dbhost; dbname=$connectstr_dbname";
+$password = $connectstr_dbpassword;
+$username= $connectstr_dbusername;
 
-    //display success message
-    echo "Connected to the register database";
+// Code below to create PDO class from online course:
+// site:            https://www.udemy.com
+// Course title:    PHP: Complete Login and Registration System with PHP & MYSQL
+// Instructor:      Osayawe Terry Ogbemudia
+// ..
 
-}catch (PDOException $ex){
-    //display error message
-    echo "Connection failed ".$ex->getMessage();
+$link = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
 }
+
+?>

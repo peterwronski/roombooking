@@ -1,19 +1,6 @@
 <?php
 
-$host="localhost"; // Host name
-$username="root"; // Mysql username
-$sqlpassword=""; // Mysql password
-$db_name="roombooking"; // Database name
-$tbl_name="users"; // Table name
-
-// Connect to server and select databse.
-$conn = new mysqli($host, $username, $sqlpassword,$db_name);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-};
-
+require_once('dbconnect.php');
 
 
     $studentid = trim($_POST["studentid"]);

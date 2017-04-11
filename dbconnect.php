@@ -37,5 +37,9 @@ if (!$conn) {
     exit;
 }
 
+else {
+    echo'NOICE.';
+}
+
 
 ?>

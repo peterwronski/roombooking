@@ -38,7 +38,7 @@ if (!$conn) {
 }
 
 else {
-    echo'NOICE.';
+    echo'CONNECTED TO DB' .$connectstr_dbhost .' ' .$connectstr_dbname;
 }
 
 

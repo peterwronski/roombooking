@@ -15,6 +15,10 @@ body{
     background-color:rgba(255,255,255,0.7) ;
 }
 
+.loginform {
+    background-color:rgba(255,255,255,0.7) ;
+}
+
 hr {
     size: 5px;
     width:80%;

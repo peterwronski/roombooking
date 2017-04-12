@@ -79,7 +79,7 @@
                 <?php
 
 
-                if ($_SERVER['REQUEST_URI'] == '/index.php' OR $_SERVER['REQUEST_URI]' == '']){
+                if ($_SERVER['REQUEST_URI'] == '/index.php' OR $_SERVER['REQUEST_URI]' == '/']){
                     echo '<li><a href="#top">Home</a></li>
                 <li><a href="#content1">Content 1</a></li>
                 <li><a href="#content2">Content 2</a></li>';

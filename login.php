@@ -25,7 +25,7 @@ $query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$s
 $row=$query->fetch_array();
 
 $count = $query->num_rows; // if email/password are correct returns must be 1 row
-
+echo $count;
 
 if( mysqli_num_rows($count) == 1)
  {

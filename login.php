@@ -4,13 +4,13 @@ session_start();
 session_unset();
 
 require_once('dbconnect.php');
-
+echo'required dbconnect file';
 
     $studentid = trim($_POST["studentid"]);
     $password = trim($_POST['password']);
 
 
-    //echo "Login echo: " .$studentid .$password;
+echo "Login echo: " .$studentid .$password;
 
 
 

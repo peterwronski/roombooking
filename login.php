@@ -30,6 +30,8 @@ $query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$s
 
 $result=mysqli_query($db,$query);
 
+$count = $result->mysqli_num_rows;
+
 if( mysqli_num_rows($result) == 1)
  {
      header("location: login_success.php"); // Redirecting To another Page

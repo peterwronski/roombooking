@@ -76,7 +76,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="#top">Home</a></li>
-                li><a href="#content1">Content 1</a></li>
+                <li><a href="#content1">Content 1</a></li>
 
             </ul>
 

@@ -1,6 +1,6 @@
 <?php
 
     include('header.php');
-    echo'<h1>YOU FUCKED UP ' .$count .'</h1>';
+    echo'<h1>YOU FUCKED UP</h1>';
 
 ?>

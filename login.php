@@ -9,8 +9,8 @@ include('dbconnect.php');
     $studentid = trim($_POST["studentid"]);
     $password = trim($_POST['password']);
 
-echo "Login echo: " .$studentid .$password;
-echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
+//echo "Login echo: " .$studentid .$password;
+//echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
 
 // To protect MySQL injection (more detail about MySQL injection)
 $studentid = stripslashes($studentid);
@@ -21,11 +21,11 @@ $password = $conn->real_escape_string($password);
 
 //$sql="SELECT * FROM $tbl_name WHERE student_id='$studentid' and pword='$password'";
 $query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$studentid' AND password= '$password'");
-echo $query;
+
 $result=mysqli_query($db,$query);
-echo$result;
+
 $count = mysqli_num_rows($result);
-echo $count;
+
 
 
 

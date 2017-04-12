@@ -84,8 +84,8 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <?php
-                if (isset($_SESSION['userSession'])&&(($_SESSION['userSession']) == true)) {
-                    echo'<li><a href="useraccount.php">Welcome ' .$_SESSION['userSession'].'</a></li>
+                if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
+                    echo'<li><a href="useraccount.php">Welcome ' .$_SESSION['userloggedin'].'</a></li>
                 <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Log out</a></li>';
                 }
                 else{

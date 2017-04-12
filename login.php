@@ -9,8 +9,8 @@ include('dbconnect.php');
     $studentid = trim($_POST["studentid"]);
     $password = trim($_POST['password']);
 
-echo "Login echo: " .$studentid .$password;
-echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
+//echo "Login echo: " .$studentid .$password;
+//echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
 
 // To protect MySQL injection (more detail about MySQL injection)
 $studentid = stripslashes($studentid);

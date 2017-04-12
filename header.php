@@ -58,7 +58,7 @@
 
 
 
-<?php session_start(); ?>
+
 <div id="top"></div>
 <div id="logobg">
 <img src="img/logoblack.png" width="60%" height="60%" class="center-block img-responsive" id="logo"/>

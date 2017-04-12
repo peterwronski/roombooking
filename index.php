@@ -2,7 +2,7 @@
 ?>
 
 
-<div class="container" id="home">
+<div class="container" id="content1">
     <div class="row"><h1>What is Lorem Ipsum?</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox"><br/>
 
@@ -105,7 +105,7 @@
 
 <hr/>
 
-<div class="container" id="content1">
+<div class="container" id="content2">
     <div class="row"><h1>What is Lorem Ipsum?</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox"><br/>
 

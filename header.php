@@ -49,7 +49,7 @@
         e.preventDefault();
 
         // top position relative to the document
-        var pos = $id.offset(top:50px).top;
+        var pos = $id.offset(top:500px).top;
 
         // animated top scrolling
         $('body, html').animate({scrollTop: pos});

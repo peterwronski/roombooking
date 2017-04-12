@@ -20,7 +20,7 @@ $password = $conn->real_escape_string($password);
 
 
 
-$query = $conn->query("SELECT student_id, password FROM users WHERE student_id='$studentid' AND password= '$password'");
+$query = $conn->query("SELECT student_id, password, name FROM users WHERE student_id='$studentid' AND password= '$password'");
 
 $row=$query->fetch_array();
 

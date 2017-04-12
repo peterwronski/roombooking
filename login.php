@@ -21,9 +21,9 @@ $password = $conn->real_escape_string($password);
 
 //$sql="SELECT * FROM $tbl_name WHERE student_id='$studentid' and pword='$password'";
 $query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$studentid'");
-
+echo $query;
 $result=mysqli_query($db,$query);
-
+echo$result;
 $count = mysqli_num_rows($result);
 echo $count;
 

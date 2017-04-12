@@ -35,9 +35,9 @@ $count = $query->num_rows; // if email/password are correct returns must be 1 ro
 // If result matched $myusername and $mypassword, table row must be 1 row
 if ($count==1) {
     $_SESSION['userSession'] = $row['name'];
-    echo 'SESSION ECHO: ' .$_SESSION['userSession'];
-    echo 'ROW ECHO: ' .$row['name'];
-    //header("Location: login_success.php");
+
+
+    header("Location: login_success.php");
 };
 
 ?>

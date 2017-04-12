@@ -7,8 +7,7 @@
         <div class="col-lg-8 col-lg-offset-2 contentbox"><br/>
 
             <?php
-            $currentpage = $_SERVER['REQUEST_URI'];
-            echo $currentpage;
+
             ?>
 
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.

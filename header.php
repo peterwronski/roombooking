@@ -77,9 +77,10 @@
             <ul class="nav navbar-nav">
 
                 <?php
+                $_SESSION['currentpage'] = $_SERVER['REQUEST_URI'];
+                echo $currentpage;
 
-
-                if ($_SERVER['REQUEST_URI'] == '/index.php' OR $_SERVER['REQUEST_URI]' == '/']){
+                if ($_SESSION['currentpage'] == '/index.php' OR $_SESSION['currentpage'] == '/'){
                     echo '<li><a href="#top">Home</a></li>
                 <li><a href="#content1">Content 1</a></li>
                 <li><a href="#content2">Content 2</a></li>';

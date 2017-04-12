@@ -22,14 +22,12 @@ $password = $conn->real_escape_string($password);
 //$sql="SELECT * FROM $tbl_name WHERE student_id='$studentid' and pword='$password'";
 $query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$studentid' AND password= '$password'");
 
-$result=mysqli_query($db,$query);
+$row=$query->fetch_array();
 
-$count = mysqli_num_rows($result);
-
-
+$count = $query->num_rows; // if email/password are correct returns must be 1 row
 
 
-if( mysqli_num_rows($result) == 1)
+if( mysqli_num_rows($count) == 1)
  {
      header("location: login_success.php"); // Redirecting To another Page
  }else

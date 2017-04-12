@@ -27,18 +27,11 @@ $row=$query->fetch_array();
 $count = $query->num_rows; // if email/password are correct returns must be 1 row
 echo $count;
 
-if( $count == 1)
- {
-     header("location: login_success.php"); // Redirecting To another Page
- }else
- {
-     header("location: login_failed.php");
-
- }
 
 
 
-/*
+
+
 // If result matched $myusername and $mypassword, table row must be 1 row
 if (password_verify($password, $row['password']) && $count==1) {
     $_SESSION['userSession'] = $row['studentid'];
@@ -49,6 +42,6 @@ if (password_verify($password, $row['password']) && $count==1) {
      <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Invalid Username or Password !
     ";
 
-}*/
+}
 $conn->close();
 ?>

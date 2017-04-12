@@ -27,6 +27,8 @@ $result=mysqli_query($db,$query);
 $count = mysqli_num_rows($result);
 echo $count;
 
+
+/*
 if( mysqli_num_rows($result) == 1)
  {
      header("location: login_success.php"); // Redirecting To another Page
@@ -38,7 +40,7 @@ if( mysqli_num_rows($result) == 1)
 
 
 
-/*
+
 // If result matched $myusername and $mypassword, table row must be 1 row
 if (password_verify($password, $row['password']) && $count==1) {
     $_SESSION['userSession'] = $row['studentid'];

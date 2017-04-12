@@ -24,12 +24,11 @@ $studentid = $conn->real_escape_string($studentid);
 $password = $conn->real_escape_string($password);
 //$sql="SELECT * FROM $tbl_name WHERE student_id='$studentid' and pword='$password'";
 $query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$studentid'");
-$row=$query->fetch_array();
 
-// Mysql_num_row is counting table row
-$count = $query->num_rows;
 
-$result=mysqli_query($db,$sql);
+
+
+$result=mysqli_query($db,$query);
 
 if( mysqli_num_rows($result) == 1)
  {

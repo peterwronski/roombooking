@@ -106,7 +106,7 @@
 <hr/>
 
 <div class="container" id="content2">
-    <div class="row"><h1>What is Lorem Ipsum?</h1>
+    <div class="row"><h1>What is Lorem Ipsum22222?</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox"><br/>
 
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.

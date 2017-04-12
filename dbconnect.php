@@ -17,12 +17,13 @@ foreach ($_SERVER as $key => $value) {
 }
 
 //If we are not on Azure
+/*
 if (!$connectstr_dbhost) {
     $connectstr_dbhost = 'localhost';
     $connectstr_dbname = 'reqlocaldb';
     $connectstr_dbusername = 'root';
     $connectstr_dbpassword = 'Zppsit0!';
-}
+}*/
 
 // Build strings for creating PHP Database Object - PDO
 $dsn = "mysql:host=$connectstr_dbhost; dbname=$connectstr_dbname";

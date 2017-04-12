@@ -36,10 +36,6 @@ $count = $query->num_rows; // if email/password are correct returns must be 1 ro
 if ($count==1) {
     $_SESSION['userSession'] = $row['name'];
     header("Location: login_success.php");
-} else {
+};
 
-    $_SESSION['loginmessage'] = "<div class='alert alert-danger'>
-     <span class='glyphicon glyphicon-info-sign'></span> &nbsp; Invalid Username or Password !";
-}
-$conn->close();
 ?>

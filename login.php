@@ -1,7 +1,7 @@
 <?php
-
-session_start();
 session_unset();
+session_start();
+
 
 include('dbconnect.php');
 //echo'required dbconnect file';

@@ -75,8 +75,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="#top">Home</a></li>
-                <li><a href="#content1">Content 1</a></li>
+                <li><a href="index.php#top">Home</a></li>
+                <li><a href="index.php#content1">Content 1</a></li>
+                <li><a href="index.php#content2">Content 2</a></li>
 
             </ul>
 

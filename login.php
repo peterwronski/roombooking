@@ -32,7 +32,7 @@ $result=mysqli_query($db,$query);
 
 
 
-if( mysqli_num_rows($result) == 0)
+if( mysqli_num_rows($result) == 1)
  {
      header("location: login_success.php"); // Redirecting To another Page
  }else

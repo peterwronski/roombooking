@@ -3,7 +3,7 @@
 session_start();
 session_unset();
 
-require_once('dbconnect.php');
+include('dbconnect.php');
 echo'required dbconnect file';
 
     $studentid = trim($_POST["studentid"]);

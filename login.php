@@ -13,14 +13,14 @@ echo "Login echo: " .$studentid .$password;
 echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
 
 // To protect MySQL injection (more detail about MySQL injection)
-// $studentid = stripslashes($studentid);
-// $password = stripslashes($password);
-// $studentid = $conn->real_escape_string($studentid);
-// $password = $conn->real_escape_string($password);
+$studentid = stripslashes($studentid);
+$password = stripslashes($password);
+$studentid = $conn->real_escape_string($studentid);
+$password = $conn->real_escape_string($password);
 
 
 //$sql="SELECT * FROM $tbl_name WHERE student_id='$studentid' and pword='$password'";
-$query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$studentid'");
+$query = $conn->query("SELECT studentid, password FROM users WHERE studentid='$studentid' AND password= '$password'");
 echo $query;
 $result=mysqli_query($db,$query);
 echo$result;
@@ -28,7 +28,7 @@ $count = mysqli_num_rows($result);
 echo $count;
 
 
-/*
+
 if( mysqli_num_rows($result) == 1)
  {
      header("location: login_success.php"); // Redirecting To another Page
@@ -40,7 +40,7 @@ if( mysqli_num_rows($result) == 1)
 
 
 
-
+/*
 // If result matched $myusername and $mypassword, table row must be 1 row
 if (password_verify($password, $row['password']) && $count==1) {
     $_SESSION['userSession'] = $row['studentid'];

@@ -12,6 +12,8 @@ echo'required dbconnect file';
 
 echo "Login echo: " .$studentid .$password;
 
+echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
+
 
 
 

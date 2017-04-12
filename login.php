@@ -36,6 +36,7 @@ if( mysqli_num_rows($result) == 1)
  }else
  {
      header("location: login_failed.php");
+
  }
 
 

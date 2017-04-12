@@ -6,7 +6,10 @@
     <div class="row"><h1>What is Lorem Ipsum?</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox"><br/>
 
-            <?php echo basename(__FILE__); ?>
+            <?php
+            $currentpage = $_SERVER['REQUEST_URI'];
+            echo $currentpage;
+            ?>
 
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
     Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.

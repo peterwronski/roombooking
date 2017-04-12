@@ -49,7 +49,7 @@
         e.preventDefault();
 
         // top position relative to the document
-        var pos = $id.offset().top +100;
+        var pos = $id.offset().top;
 
         // animated top scrolling
         $('body, html').animate({scrollTop: pos});
@@ -75,9 +75,23 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="index.php#top">Home</a></li>
-                <li><a href="index.php#content1">Content 1</a></li>
-                <li><a href="index.php#content2">Content 2</a></li>
+
+                <?php
+
+
+                if ($_SERVER['REQUEST_URI'] == '/index.php'){
+                    echo '<li><a href="#top">Home</a></li>
+                <li><a href="#content1">Content 1</a></li>
+                <li><a href="#content2">Content 2</a></li>';
+                }
+                else {
+                    echo '<li><a href="index.php#top">HomeELSE</a></li>
+                <li><a href="index.php#content1">Content 1ELSE</a></li>
+                <li><a href="index.php#content2">Content 2ELSE</a></li>';
+                }
+
+                ?>
+
 
             </ul>
 

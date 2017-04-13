@@ -13,16 +13,7 @@ include('dbconnect.php');
 //echo '<br/> Host:' .$connectstr_dbhost .'<br/>Dbase: ' .$connectstr_dbname .'<br/>Name: ' .$connectstr_dbusername;
 
 
-    if ((empty($_POST['studentid']))||($_POST['studentid']!="")) {// this checks if email field is empty
-        $_SESSION['loginmessage'] = "<div class='alert alert-danger'>
-        <span class='glyphicon glyphicon-info-sign'></span>Student ID field cannot be empty </div>";
-        header('Location: index.php');
-    }
-    if ((empty($_POST['password']))||($_POST['password']!="")) {//this checks if password field is empty
-        $_SESSION['passwordmessage'] = "<div class='alert alert-danger'>
-     <span class='glyphicon glyphicon-info-sign'></span> Password field cannot be empty </div>";
-        header('Location:index.php');
-    }
+
 
 // To protect MySQL injection (more detail about MySQL injection)
 $studentid = stripslashes($studentid);
@@ -50,6 +41,10 @@ if ($count==1) {
 
 
     header("Location: login_success.php");
-};
+}
+
+else {
+    $_SESSION['badloginmsg'] = 'Wrong Student ID or password. Please try again.';
+}
 
 ?>

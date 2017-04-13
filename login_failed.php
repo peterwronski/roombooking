@@ -1,6 +1,12 @@
 <?php
 
-    include('header.php');
-    echo'<h1>YOU FUCKED UP</h1>';
+    //include('header.php');
+header("Location: index.php#loginpage");
+
+    //echo '<span class="glyphicon glyphicon-info-sign"></span>' .$_SESSION['badloginmsg'];
 
 ?>
+
+<script type="text/javascript">
+    alert("message successfully sent");
+</script>

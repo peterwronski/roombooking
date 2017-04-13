@@ -8,5 +8,5 @@ header("Location: index.php#loginpage");
 ?>
 
 <script type="text/javascript">
-    alert("message successfully sent");
+    alert("Wrong Student ID or password. Please try again.");
 </script>

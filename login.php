@@ -45,6 +45,7 @@ if ($count==1) {
 
 else {
     $_SESSION['badloginmsg'] = 'Wrong Student ID or password. Please try again.';
+    header("Location: login_failed.php");
 }
 
 ?>

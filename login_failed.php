@@ -1,5 +1,8 @@
-<?php
+<script type="text/javascript">
+    alert("Wrong Student ID or password. Please try again.");
+</script>
 
+<?php
     //include('header.php');
 header("Location: index.php#loginpage");
 
@@ -7,6 +10,4 @@ header("Location: index.php#loginpage");
 
 ?>
 
-<script type="text/javascript">
-    alert("Wrong Student ID or password. Please try again.");
-</script>
+

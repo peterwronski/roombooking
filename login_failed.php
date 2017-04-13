@@ -1,13 +1,7 @@
 <script type="text/javascript">
     alert("Wrong Student ID or password. Please try again.");
+
+    window.location = "index.php#loginpage"
 </script>
-
-<?php
-    //include('header.php');
-header("Location: index.php#loginpage");
-
-    //echo '<span class="glyphicon glyphicon-info-sign"></span>' .$_SESSION['badloginmsg'];
-
-?>
 
 

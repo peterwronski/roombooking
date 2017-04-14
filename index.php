@@ -88,10 +88,12 @@
 </div>
 </div>
 
+<div class="container" id="loginpage">
+
 <hr/>
 
 
-<div class="container" id="loginpage">
+
        <div class="row">
            <h1>Check your booking</h1>
            <div class="col-lg-4 col-lg-offset-4 loginform">
@@ -109,11 +111,12 @@
        </div>
 </div>
 
-<hr/>
 
 
 
 <div class="container" id="content2">
+    <hr/>
+
     <div class="row"><h1>What is Lorem Ipsum22222?</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox"><br/>
 

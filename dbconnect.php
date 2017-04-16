@@ -42,7 +42,7 @@ if (!$conn) {
 }
 
 else {
-    echo'CONNECTED TO DB' .$connectstr_dbhost .' ' .$connectstr_dbname .' ' .$connectstr_dbusername;
+   // echo'CONNECTED TO DB' .$connectstr_dbhost .' ' .$connectstr_dbname .' ' .$connectstr_dbusername;
 }
 
 

@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Peter
+ * Date: 14/04/2017
+ * Time: 03:57
+ */
+
 session_unset();
 session_start();
 
@@ -47,5 +54,5 @@ else {
     $_SESSION['badloginmsg'] = 'Wrong Student ID or password. Please try again.';
     header("Location: login_failed.php");
 }
-
+$conn->close();
 ?>

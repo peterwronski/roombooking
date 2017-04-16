@@ -5,6 +5,8 @@ $connectstr_dbname = '';
 $connectstr_dbusername = '';
 $connectstr_dbpassword = '';
 
+
+
 // get connection detail for azure host and db
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
@@ -16,14 +18,15 @@ foreach ($_SERVER as $key => $value) {
     $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
+
 //If we are not on Azure
 /*
 if (!$connectstr_dbhost) {
     $connectstr_dbhost = 'localhost';
-    $connectstr_dbname = 'reqlocaldb';
+    $connectstr_dbname = 'roombooking';
     $connectstr_dbusername = 'root';
-    $connectstr_dbpassword = 'Zppsit0!';
-}*/
+    $connectstr_dbpassword = '';
+};*/
 
 // Build strings for creating PHP Database Object - PDO
 $dsn = "mysql:host=$connectstr_dbhost; dbname=$connectstr_dbname";
@@ -39,7 +42,7 @@ if (!$conn) {
 }
 
 else {
-   // echo'CONNECTED TO DB' .$connectstr_dbhost .' ' .$connectstr_dbname .' ' .$connectstr_dbusername;
+    echo'CONNECTED TO DB' .$connectstr_dbhost .' ' .$connectstr_dbname .' ' .$connectstr_dbusername;
 }
 
 

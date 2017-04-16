@@ -11,15 +11,18 @@ include('dbconnect.php');
 $query = $conn->query("SELECT * FROM room");
 
 $row=$query->fetch_array();
+echo $row
 
 $count = $query->num_rows;
-
+echo $count
+/*
 echo "<table>";
 
 while($row = $count){
-    echo "<tr><td>" . $row['room_name'] . "</td><td>" . $row['room_size'] . "</td><td>". $row['room_desc'] . "</td></tr>";  //$row['index'] the index here is a field name
+    echo "<tr><td>" . $row['room_name'] . "</td><td>" . $row['room_size'] . "</td><td>". $row['room_desc'] . "</td></tr>";
 }
 
 echo "</table>";
-
+*/
 $conn->close();
+?>

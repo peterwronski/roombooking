@@ -2,7 +2,7 @@
 include('dbconnect.php');
 //if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
     $roomname = $_POST["roomname"];
-    $roomsize = $_POST["roomnsize"];
+    $roomsize = $_POST["roomsize"];
     $roomdesc = $_POST["roomdesc"];
 
     $roomname = $conn->real_escape_string($roomname);

@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+include('header.php');
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
     include('dbconnect.php');
 
@@ -27,6 +28,11 @@ echo '
         </form>
         </table>
         ';
+}
+else{
+    echo'<div class="alert alert-warning">
+  <strong>You need to be logged in to book a room</strong> Please <a href="#loginpage">click here to log in</a> or <a href="register.php">here to register</a>
+</div>';
 }
 
 //$row=$query->fetch_array();

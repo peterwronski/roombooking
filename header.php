@@ -79,20 +79,20 @@
                 <?php
                 $_SESSION['currentpage'] = $_SERVER['REQUEST_URI'];
 
-
+                //this changes links - if user is on index.php, smooth scrolling is enabled (for some reason the smooth scrolling script only works with # links)
                 if ($_SESSION['currentpage'] == '/index.php' OR $_SESSION['currentpage'] == '/'){
                     echo '<li><a href="#top">Home</a></li>
                 <li><a href="#content1">Content1</a></li>
-                <li><a href="#content2">Content 2</a></li>';
+                <li><a href="#rooms">Our Rooms</a></li>';
                 }
                 else {
-                    echo '<li><a href="index.php#top">HomeELSE</a></li>
-                <li><a href="index.php#content1">Content 1ELSE</a></li>
-                <li><a href="index.php#content2">Content 2ELSE</a></li>';
+                    echo '<li><a href="index.php#top">Home</a></li>
+                <li><a href="index.php#content1">Content 1E</a></li>
+                <li><a href="index.php#rooms">Our Rooms</a></li>';
                 }
 
                 ?>
-                <li><a href="rooms.php">Our Rooms</a></li>
+
 
 
             </ul>

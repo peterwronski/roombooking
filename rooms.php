@@ -13,18 +13,9 @@ $query = $conn->query("SELECT room_name, room_size, room_desc FROM room");
 //$row=$query->fetch_array();
 $count = mysql_num_rows($query);
 
-
-/* ///TABLE///
-echo "<table>";
-
-while($row <= $count){
-    echo "<tr><td>" . $row['room_name'] . "</td><td>" . $row['room_size'] . "</td><td>". $row['room_desc'] . "</td></tr>";
-}
-echo "</table>";
-*/
-
 echo '
 <div class="container" id="rooms">
+<hr/>
     <div class="row"><h1>Our Rooms @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table>

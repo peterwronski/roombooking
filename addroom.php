@@ -12,7 +12,7 @@ include('dbconnect.php');
     $query = $conn->query("INSERT INTO room VALUES ('$roomsize ','$roomdesc','$roomname')");
 mysqli_query($query) or trigger_error(mysqli_error()." in ".$query);
 
-    header("Location:index.php#rooms");
+    //header("Location:index.php#rooms");
 /*};
 else{
     ?>

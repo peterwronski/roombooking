@@ -14,7 +14,7 @@ $row=$query->fetch_array();
 echo $row;
 
 $count = $query->num_rows;
-//echo $count;
+echo '<br/>' .$count;
 /*
 echo "<table>";
 

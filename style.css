@@ -54,6 +54,7 @@ table.rooms, th.rooms, td.rooms{
     padding: 15px;
     margin-top: 5%;
     margin-bottom: 5%;
+    font-family: Verdana;
 }
 
 table.logintable, th.logintable, td.logintable{

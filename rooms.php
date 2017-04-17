@@ -33,6 +33,7 @@ if ($query->num_rows > 0) {
     echo "0 results";
 }
 echo '</table>';
+$conn->close();
 
 if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
     echo'
@@ -56,5 +57,5 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
 
 }
 
-$conn->close();
+
 ?>

@@ -26,11 +26,8 @@ echo '
 <div class="container" id="rooms">
     <div class="row"><h1>Our Rooms @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
-<table>
+<table>';
 
-
-
-';
 if ($query->num_rows > 0) {
     // output data of each row
     while($row = $query->fetch_assoc()) {

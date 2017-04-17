@@ -36,11 +36,9 @@ form {
     padding: 5%;
 
 }
-table{
+table, th, td{
     border: 1px solid black;
-}
-
-td{
     word-wrap: normal;
     padding: 5%;
 }
+

@@ -10,9 +10,10 @@ include('dbconnect.php');
     $roomdesc = $conn->real_escape_string($roomdesc);
 
     $query = $conn->query("INSERT INTO room VALUES ('$roomsize ','$roomdesc','$roomname')");
+    echo $query;
 mysqli_query($query) or trigger_error(mysqli_error()." in ".$query);
-$row=$query->fetch_array();
-echo $row;
+
+
 
     //header("Location:index.php#rooms");
 /*};

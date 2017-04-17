@@ -40,5 +40,7 @@ table, th, td{
     border: 1px solid black;
     word-wrap: normal;
     padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 

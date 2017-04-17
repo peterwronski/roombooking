@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Solex Regular';
+    src: url('SolexRegular.ttf');
+}
+
+
 body{
     background: url('img/campus.png') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -7,12 +13,18 @@ body{
 
 }
 
+p{
+    /*font-size: 1.2em; */
+    font-family:  Verdana;
+    color: black;
+}
+
 #logobg{
     background-color:rgba(255,255,255,0.7) ;
 }
 
 .contentbox{
-    background-color:rgba(255,255,255,0.7) ;
+    background-color:rgba(190,191,195,0.7) ;
 }
 
 .loginform {
@@ -28,7 +40,7 @@ hr {
 
 h1{
     color: white;
-    font-family: SolexRegular, MyriadPro, Arial;
+    font-family: 'SolexRegular', MyriadPro, Arial;
     text-align: center;
 }
 
@@ -36,12 +48,24 @@ form {
     padding: 5%;
 
 }
-table, th, td{
+table.rooms, th.rooms, td.rooms{
     border: 1px solid black;
     word-wrap: normal;
     padding: 15px;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+table.logintable, th.logintable, td.logintable{
+
+    word-wrap: normal;
+    padding: 5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left:auto;
+    margin-right:auto;
+
+
 }
 
 th{

@@ -18,16 +18,16 @@ echo '
 <hr/>
     <div class="row"><h1>Our Rooms @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
-<table>
-    <tr> <th style="width:15%">Room Name</th>
-         <th style="width:15%">Room Size</th>
-         <th style="width:70%">Room Description</th>
+<table class="rooms">
+    <tr> <th  class="rooms">Room Name</th>
+         <th  class="rooms">Room Size</th>
+         <th  class="rooms">Room Description</th>
     </tr>';
 
 if ($query->num_rows > 0) {
     // output data of each row
     while($row = $query->fetch_assoc()) {
-        echo "<tr><td>" . $row['room_name'] . "</td><td>" . $row['room_size'] . "</td><td>". $row['room_desc'] . "</td></tr>";
+        echo "<tr><td  class=\"rooms\">" . $row['room_name'] . "</td><td class=\"rooms\">" . $row['room_size'] . "</td><td class=\"rooms\">". $row['room_desc'] . "</td></tr>";
     }
 } else {
     echo "0 results";

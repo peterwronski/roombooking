@@ -7,6 +7,6 @@ if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)){
 }
 
 else {
-    echo '<h1> you fucked up the sessions again '.$_SESSION['userloggedin'] .'</h1>';
+    echo '<h1> Sessions are messed up again '.$_SESSION['userloggedin'] .'</h1>';
 }
 ?>

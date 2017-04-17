@@ -6,7 +6,7 @@ include 'header.php';
 
 <div class="container" id="content1">
     <div class="row"><h1>What is Lorem Ipsum?</h1>
-        <div class="col-lg-12 col-lg-offset-2 contentbox"><br/>
+        <div class="col-lg-12 contentbox"><br/>
 
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
     Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.

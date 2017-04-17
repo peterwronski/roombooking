@@ -6,7 +6,7 @@
  * Time: 00:36
  */
 
-include ('header.php');
+
 include('dbconnect.php');
 
 $query = $conn->query("SELECT room_name, room_size, room_desc FROM room");

@@ -25,7 +25,7 @@ echo '
             
                 
         </form>
-        
+        </table>
         ';
 }
 

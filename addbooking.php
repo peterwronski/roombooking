@@ -1,6 +1,6 @@
 <?php
 
-include('header.php');
+
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
     include('dbconnect.php');
 

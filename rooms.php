@@ -13,7 +13,7 @@ $query = $conn->query("SELECT * FROM room");
 $row=$query->fetch_array();
 echo $row;
 
-$count = $query->num_rows;
+$count = mysql_num_rows($query);
 echo '<br/>' .$count;
 /*
 echo "<table>";

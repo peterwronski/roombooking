@@ -17,7 +17,7 @@ include('dbconnect.php');
 
 
 if ($conn->query($query) === TRUE) {
-    echo "New record created successfully";
+    header("Location:index.php#rooms");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

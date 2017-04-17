@@ -3,7 +3,7 @@
 include('header.php');
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)){
 
-    echo'<h1>LOGGED IN AS '.$_SESSION['userloggedin'].'</h1>';
+    header("Location:index.php");
 }
 
 else {

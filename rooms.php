@@ -38,7 +38,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
     echo'
     <form action="addroom.php" method="POST">
                    <label><b>Room Name</b></label>
-                   <input type="text" name="roomname" placeholder="Room Name id="roomname" required/>
+                   <input type="text" name="roomname" placeholder="Room Name" id="roomname" required/>
 <br/>
                    <label><b>Room Size</b></label>
                    <input type="text" name="roomsize" id="roomsize" placeholder="Room size" required/>

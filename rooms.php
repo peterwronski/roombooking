@@ -11,10 +11,10 @@ include('dbconnect.php');
 $query = $conn->query("SELECT * FROM room");
 
 $row=$query->fetch_array();
-//echo $row;
+echo $row;
 
 $count = $query->num_rows;
-echo $count;
+//echo $count;
 /*
 echo "<table>";
 

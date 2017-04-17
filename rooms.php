@@ -22,16 +22,16 @@ while($row <= $count){
 echo "</table>";
 */
 
-
+echo "<table>";
 if ($query->num_rows > 0) {
     // output data of each row
     while($row = $query->fetch_assoc()) {
-        echo "Room name: " . $row["room_name"]. " <br/> Room size: " . $row["room_size"]. "<br/> Room Description:  " . $row["room_desc"]. "<br>";
+        echo "<tr><td>" . $row['room_name'] . "</td><td>" . $row['room_size'] . "</td><td>". $row['room_desc'] . "</td></tr>";
     }
 } else {
     echo "0 results";
 }
-
+echo "</table>";
 
 $conn->close();
 ?>

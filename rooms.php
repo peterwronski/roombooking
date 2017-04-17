@@ -28,9 +28,9 @@ echo '
     <div class="row"><h1>Our Rooms @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table>
-    <tr> <th>Room Name</th>
-         <th>Room Size</th>
-         <th>Room Description</th>
+    <tr> <th style="width:15%">Room Name</th>
+         <th style="width:15%">Room Size</th>
+         <th style="width:70%">Room Description</th>
     </tr>';
 
 if ($query->num_rows > 0) {

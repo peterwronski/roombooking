@@ -11,8 +11,8 @@ include('dbconnect.php');
 
     $query = $conn->query("INSERT INTO room VALUES ('$roomname ','$roomsize','$roomdesc')");
     header("Location:index.php#rooms");
-};
-/*else{
+/*};
+else{
     ?>
 <script type="text/javascript">
     alert("You ain't supposed to be here son.");

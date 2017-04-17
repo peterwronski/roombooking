@@ -44,9 +44,6 @@ include 'header.php';
 <div class="container" id="loginpage">
 
 <hr/>
-
-
-
        <div class="row">
 
            <h1>Check your booking</h1>
@@ -71,6 +68,7 @@ include 'header.php';
 
 <?php include('rooms.php'); ?>
 
+<?php include ('addbooking.php'); ?>
 
 
 

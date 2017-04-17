@@ -6,6 +6,10 @@ if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
 
     $query = $conn->query("SELECT room_name, room_id FROM room");
 echo '
+<div class="container" id="booking">
+<hr/>
+    <div class="row"><h1>Book a room</h1>
+        <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table class="loginform"></table>
         <form method="POST">
         <tr><td> <label>Room name</label></td> <td><select>
@@ -32,6 +36,9 @@ echo '
 else{
     echo'<div class="alert alert-warning">
   <strong>You need to be logged in to book a room</strong> Please <a href="#loginpage">click here to log in</a> or <a href="register.php">here to register</a>
+        </div>
+     </div>
+    </div>
 </div>';
 }
 

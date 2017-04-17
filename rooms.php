@@ -32,10 +32,7 @@ if ($query->num_rows > 0) {
 } else {
     echo "0 results";
 }
-echo '</table>
-        </div>
-    </div>
-</div>';
+echo '</table>';
 
 if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
     echo'
@@ -51,7 +48,11 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
                    
                    <input type="submit" name="addroom-submit"/>
 
-               </form>';
+               </form>
+ 
+        </div>
+    </div>
+</div>';
 
 }
 

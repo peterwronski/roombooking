@@ -9,7 +9,7 @@ include('dbconnect.php');
     $roomsize = $conn->real_escape_string($roomsize);
     $roomdesc = $conn->real_escape_string($roomdesc);
 
-    $query = $conn->query("INSERT INTO room VALUES ('$roomname ','$roomsize','$roomdesc')");
+    $query = $conn->query("INSERT INTO room VALUES ('$roomsize ','$roomdesc','$roomname')");
     header("Location:index.php#rooms");
 /*};
 else{

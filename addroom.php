@@ -1,6 +1,6 @@
 <?php
 include('dbconnect.php');
-if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
+//if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
     $roomname = $_POST["roomname"];
     $roomsize = $_POST["roomnsize"];
     $roomdesc = $_POST["roomdesc"];
@@ -11,13 +11,13 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
 
     $query = $conn->query("INSERT INTO room VALUES ('$roomname ','$roomsize','$roomdesc')");
     header("Location:index.php#rooms");
-}
-else{
+};
+/*else{
     ?>
 <script type="text/javascript">
     alert("You ain't supposed to be here son.");
 
     window.location = "index.php"
 </script>
-<?php }
+<?php }*/
 ?>

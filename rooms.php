@@ -26,7 +26,7 @@ echo "</table>";
 if ($query->num_rows > 0) {
     // output data of each row
     while($row = $query->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        echo "Room name: " . $row["room_name"]. " <br/> Room size: " . $row["room_size"]. "<br/> Room Description:  " . $row["room_desc"]. "<br>";
     }
 } else {
     echo "0 results";

@@ -9,20 +9,14 @@ include('dbconnect.php');
     $roomsize = $conn->real_escape_string($roomsize);
     $roomdesc = $conn->real_escape_string($roomdesc);
 
-    $query = $conn->query("INSERT INTO room VALUES ('$roomsize ','$roomdesc','$roomname')");
-    echo $query;
-mysqli_query($query) or trigger_error(mysqli_error()." in ".$query);
+    $query = "INSERT INTO room VALUES ('$roomsize ','$roomdesc','$roomname')";
 
 
 
-    //header("Location:index.php#rooms");
-/*};
-else{
-    ?>
-<script type="text/javascript">
-    alert("You ain't supposed to be here son.");
 
-    window.location = "index.php"
-</script>
-<?php }*/
+if ($conn->query($query) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 ?>

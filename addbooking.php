@@ -18,7 +18,7 @@ $roomid = $_POST['roomid'];
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
-$studentid = $conn->real_escape_string($studentid);
+//$studentid = $conn->real_escape_string($studentid);
 
 echo $_SESSION['studentid'];
 

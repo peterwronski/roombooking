@@ -61,6 +61,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
 
 else{
   echo '</div>
-   
+</div>
+</div>
 ';
 }?>

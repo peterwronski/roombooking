@@ -13,13 +13,14 @@ $time_string = $_POST["bookingtime"];
 
 $roomid = $_POST["roomid"];
 $bookingdate = date_create($date_string);
-echo date_format($bookingdate, 'y/m/d');
+$bookingdatef = date_format($bookingdate, 'y/m/d');
+echo $bookingdatef;
 
 //$bookingtime = date_create($_POST["bookingtime"]);
 $bookingtime = date('H:i', $time_string);
 $user_id = $_SESSION['studentid'];
 
-echo $bookingtime .'<br/>'
+echo $bookingtime .'<br/>';
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);

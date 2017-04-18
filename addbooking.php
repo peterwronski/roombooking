@@ -15,7 +15,7 @@ $bookingdate = date_create($_POST["bookingdate"]);
 $bookingdate = date_format($bookingdate, 'd-m-y');
 
 $bookingtime = date_create($_POST["bookingtime"]);
-$bookingtime = date_format($bookingtime, 'h:i:s');
+$bookingtime = date_format($bookingtime, 'y-m-d h:i:s');
 $studentid = $_SESSION['studentid'];
 
 

@@ -32,7 +32,7 @@ $count = $sql->num_rows;
 
 
 if($count==0){
-    if(empty($specreq) {
+    if(empty($specreq)){
         $query_insertbooking = "INSERT INTO booking (student_id, room_id, bookdate, booktime, booking_status) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0')";
     }
     else{

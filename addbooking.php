@@ -21,6 +21,7 @@ $bookingtime = $conn->real_escape_string($bookingtime);
 $studentid = $conn->real_escape_string($student_id);
 
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
+$sql=$conn->query($query_selectall);
 
 $count = $query_selectall->num_rows;
 
@@ -36,5 +37,6 @@ if($count>0){
 
 else {
     echo $count;
-}
+};
+?>
 

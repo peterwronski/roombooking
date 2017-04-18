@@ -31,15 +31,16 @@ echo '
                 
         </form>
         </table>
+        </div>
+    </div>
+</div>
         ';
 }
 else{
     echo'<div class="alert alert-warning">
   <strong>You need to be logged in to book a room</strong> Please <a href="#loginpage">click here to log in</a> or <a href="register.php">here to register</a>
         </div>
-     </div>
-    </div>
-</div>';
+     ';
 }
 
 //$row=$query->fetch_array();

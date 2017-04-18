@@ -27,7 +27,7 @@ $sql=$conn->query($query_selectall);
 
 $count = $sql->num_rows;
 
-if($count==0){
+/*if($count==0){
     $query_insertbooking="INSERT INTO booking VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' ";
 
     if ($conn->query($query_insertbooking) === TRUE) {
@@ -40,6 +40,6 @@ if($count==0){
 
 else {
     echo $count .' - Room already booked';
-};
+};*/
 ?>
 

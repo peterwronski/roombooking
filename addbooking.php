@@ -20,7 +20,7 @@ $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
 $studentid = $conn->real_escape_string($studentid);
 
-echo $bookingdate .'<br/>' .$bookingtime .'<br/>' .$roomid;
+echo $_SESSION['studentid'];
 
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
 $sql=$conn->query($query_selectall);

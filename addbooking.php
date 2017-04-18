@@ -27,6 +27,8 @@ echo $bookingdate .'<br/>' .$bookingtime .'<br/>' .$roomid .'<br/>' .$_SESSION['
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate' AND booktime='$bookingtime'";
 $sql=$conn->query($query_selectall);
 
+echo '<br/>' .$query_selectall;
+
 $count = $sql->num_rows;
 
 /*if($count==0){

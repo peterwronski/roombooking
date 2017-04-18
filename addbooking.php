@@ -18,8 +18,8 @@ $date = date_create($_POST["bookingdate"]);
 $bookingdate = $_POST["bookingdate"];
 $bookingtime = $_POST["bookingtime"];
 
-$date = date_create($bookingdate);
-echo $date;
+//$date = date_create($bookingdate);
+echo $bookingdate;
 
 /*
 $studentid = $_SESSION['studentid'];

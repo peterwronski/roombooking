@@ -9,7 +9,8 @@
 include ('dbconnect.php');
 
 $roomid = $_POST["roomid"];
-$bookingdate = date_format($_POST["roomsize"], 'Y/m/d');
+$date = date_create($_POST["bookingdate"]);
+$bookingdate = date_format($date, 'Y/m/d');
 $bookingtime = $_POST["roomdesc"];
 
 

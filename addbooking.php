@@ -12,10 +12,15 @@ include ('dbconnect.php');
 /*
 $roomid = $_POST["roomid"];
 $date = date_create($_POST["bookingdate"]);
-$bookingdate = date_format($date, 'Y/m/d');
-*/ $bookingtime = date_create($_POST["bookingtime"]);
-//$bookingtime_formatted = date_format()
-echo $bookingtime;
+*/
+
+
+$bookingdate = $_POST["bookingdate"];
+$bookingtime = $_POST["bookingtime"];
+
+$date = date_create($bookingdate);
+echo $date;
+
 /*
 $studentid = $_SESSION['studentid'];
 

@@ -20,6 +20,9 @@ echo '<table class="logintable">
         <tr><td align="right" class="logintable"><label>Booking date</label></td><td align="left" class=" logintable"><input type="date" name="bookingdate" value="<?php echo date(\'Y-m-d\'); ?>" required/></td></tr>
              
         <tr><td align="right" class="logintable"><label>Booking time</label></td><td align="left" class=" logintable"><input type="time" name="bookingtime" value="<?php echo time(\'H-i\'); ?>" required/></td></tr>     
+       
+        <tr><td align="right" class="logintable"><label>Special Requirements</label></td><td align="left" class=" logintable"><input type="textbox" name="specreq" placeholder="Let us know if you have any special requirements, e.g. special equipment or accessibility"/></td></tr>     
+    
                 
         <tr><td class="logintable" colspan="2" align="center"><input type="submit"/></td></tr>
             

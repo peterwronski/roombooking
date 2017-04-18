@@ -14,7 +14,8 @@ $roomid = $_POST["roomid"];
 $bookingdate = date_create($_POST["bookingdate"]);
 $bookingdate = date_format($bookingdate, 'd-m-y');
 
-$bookingtime = $_POST["bookingtime"];
+$bookingtime = date_create($_POST["bookingtime"]);
+$bookingtime = date_format($bookingtime, 'h:i:s');
 $studentid = $_SESSION['studentid'];
 
 
@@ -24,7 +25,7 @@ $bookingtime = $conn->real_escape_string($bookingtime);
 $studentid = $conn->real_escape_string($studentid);
 
 echo $bookingdate;
-
+echo '<br/>' .$bookingtime;
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
 $sql=$conn->query($query_selectall);
 

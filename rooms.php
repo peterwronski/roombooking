@@ -55,10 +55,5 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
                </form>
  
         </div>
-    </div>
-</div>
-';
-}
-
-
-?>
+    </div>';
+} ?>

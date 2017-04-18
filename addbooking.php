@@ -5,7 +5,7 @@
  * Date: 18/04/2017
  * Time: 15:01
  */
-start_session();
+//start_session();
 include ('dbconnect.php');
 
 

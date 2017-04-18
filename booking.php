@@ -19,11 +19,11 @@ echo '
     };
      echo'</select></td></tr>
 
-        <tr><td class=" logintable"><label>Booking date</label></td><td class=" logintable"><input type="date" id="bookingdate" required/></td></tr>
+        <tr><td align="right" class=" logintable"><label>Booking date</label></td><td align="left" class=" logintable"><input type="date" id="bookingdate" required/></td></tr>
              
-        <tr><td class=" logintable"><label>Booking time</label></td><td class=" logintable"><input type="time" id="bookingtime" required/></td></tr>     
+        <tr><td align="right" class=" logintable"><label>Booking time</label></td><td align="left" class=" logintable"><input type="time" id="bookingtime" required/></td></tr>     
                 
-        <tr><td class="logintable" colspan="2" align="center"><input type="submit"/></td></tr>
+        <tr><td align="right" class="logintable" colspan="2" align="center"><input type="submit"/></td></tr>
             
                 
         </form>

@@ -23,7 +23,7 @@ $studentid = $conn->real_escape_string($student_id);
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
 $sql=$conn->query($query_selectall);
 
-$count = $query_selectall->num_rows;
+$count = $sql->num_rows;
 
 if($count>0){
     $sql=$conn->query("INSERT INTO booking VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' " );

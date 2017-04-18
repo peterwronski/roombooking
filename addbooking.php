@@ -10,9 +10,9 @@ echo '
 <hr/>
     <div class="row"><h1>Book a room</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
-<table class="loginform"></table>
+<table class="loginform logintable"></table>
         <form method="POST">
-        <tr><td> <label>Room name</label></td> <td><select>
+        <tr><td class="logintable"> <label>Room name</label></td> <td><select id="roomname">
            
                 ';
     while($row = $query->fetch_assoc()) {
@@ -22,9 +22,9 @@ echo '
     };
      echo'</select></td></tr>
 
-        <tr><td class="loginform"><label>Booking date</label></td><td class="loginform"><input type="date" id="bookingdate" required/></td></tr>
+        <tr><td class=" logintable"><label>Booking date</label></td><td class=" logintable"><input type="date" id="bookingdate" required/></td></tr>
              
-        <tr><td class="loginform"><label>Booking time</label></td><td class="loginform"><input type="time" id="bookingtime" required/></td></tr>     
+        <tr><td class=" logintable"><label>Booking time</label></td><td class=" logintable"><input type="time" id="bookingtime" required/></td></tr>     
                 
         
             

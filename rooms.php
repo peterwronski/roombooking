@@ -57,4 +57,10 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
         </div>
     </div>
 </div>    ';
-} ?>
+}
+
+else{
+  echo '</div>
+    </div>
+</div>';
+}?>

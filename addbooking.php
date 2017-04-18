@@ -19,7 +19,7 @@ $bookingdate = $_POST["bookingdate"];
 //$bookingtime = $_POST["bookingtime"];
 
 //$date = date_create($bookingdate);
-echo $bookingdate;
+//echo $bookingdate;
 
 /*
 $studentid = $_SESSION['studentid'];

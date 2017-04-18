@@ -11,7 +11,8 @@ include ('dbconnect.php');
 
 
 $roomid = $_POST["roomid"];
-$bookingdate = date_format($_POST["bookingdate"],'Y-M-D');
+$bookingdate = date_create($_POST["bookingdate"]);
+$bookingdate = date_format($bookingdate, 'y-m-d');
 $bookingtime = $_POST["bookingtime"];
 $studentid = $_SESSION['studentid'];
 

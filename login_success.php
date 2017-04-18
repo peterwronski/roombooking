@@ -2,8 +2,8 @@
 
 include('header.php');
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)){
-echo $_SESSION['studentid'];
-    //header("Location:index.php");
+//echo $_SESSION['studentid'];
+    header("Location:index.php");
 }
 
 else {

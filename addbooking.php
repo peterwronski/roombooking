@@ -22,9 +22,9 @@ echo '
     };
      echo'</select></td></tr>
 
-        <tr><td class="loginform"><label>Booking date</label></td><td class="loginform"><input type="date" required></input></td></tr>
+        <tr><td class="loginform"><label>Booking date</label></td><td class="loginform"><input type="date" id="bookingdate" required/></td></tr>
              
-        <tr><td class="loginform"><label>Booking time</label></td><td class="loginform"><input type="time" required></input></td></tr>     
+        <tr><td class="loginform"><label>Booking time</label></td><td class="loginform"><input type="time" id="bookingtime" required/></td></tr>     
                 
         
             

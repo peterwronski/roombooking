@@ -10,14 +10,11 @@ echo '
 <hr/>
     <div class="row"><h1>Book a room</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
-<table class="loginform logintable"></table>
+<table class="logintable"></table>
         <form method="POST">
         <tr><td class="logintable"> <label>Room name</label></td> <td><select id="roomname">
-           
-                ';
+           ';
     while($row = $query->fetch_assoc()) {
-
-
                     echo'<option value='.$row["room_id"].'>' .$row["room_name"] .'</option>';
     };
      echo'</select></td></tr>

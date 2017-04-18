@@ -17,7 +17,7 @@ echo '
 <div class="container" id="rooms">
 <hr/>
     <div class="row"><h1>Our Rooms @ RGU</h1>
-        <div class="col-lg-8 contentbox">
+        <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table class="rooms">
     <tr> <th  class="rooms">Room Name</th>
          <th  class="rooms">Room Size</th>

@@ -24,7 +24,7 @@ $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate 
 
 $count = $query_selectall->num_rows;
 
-if(count>0){
+if($count>0){
     $sql=$conn->query("INSERT INTO booking VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' " );
     if ($conn->query($query) === TRUE) {
         echo 'Booking Added!';

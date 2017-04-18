@@ -23,7 +23,7 @@ echo '
              
         <tr><td class=" logintable"><label>Booking time</label></td><td class=" logintable"><input type="time" id="bookingtime" required/></td></tr>     
                 
-        <tr><td class="logintable" align="center"><input type="submit"/></td></tr>
+        <tr><td class="logintable" colspan="2" align="center"><input type="submit"/></td></tr>
             
                 
         </form>

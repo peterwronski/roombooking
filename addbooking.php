@@ -15,19 +15,20 @@ include ('dbconnect.php');
 $bookingdate = date('Y-m-d', strtotime($_POST['bookingdate']));
 $bookingtime = date('H:i', strtotime($_POST['bookingtime']));
 $roomid = $_POST['roomid'];
+$userid = $_SESSION['studentid'];
 
 
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
+$userid = $conn->real_escape_string($userid);
 
-
-echo $bookingdate .'<br/>' .$bookingtime .'<br/>' .$roomid .'<br/>' .$_SESSION['studentid'];
+echo $bookingdate .'<br/>' .$bookingtime .'<br/>' .$roomid .'<br/>' .$userid;
 
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate' AND booktime='$bookingtime'";
 $sql=$conn->query($query_selectall);
 
-echo '<br/>' .$query_selectall;
+
 
 $count = $sql->num_rows;
 

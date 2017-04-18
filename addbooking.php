@@ -8,12 +8,14 @@
 
 include ('dbconnect.php');
 
-echo $_POST["bookingtime"];
+
 /*
 $roomid = $_POST["roomid"];
 $date = date_create($_POST["bookingdate"]);
 $bookingdate = date_format($date, 'Y/m/d');
-$bookingtime = date('H:i:s', strtotime($_POST["bookingtime"]));
+*/ $bookingtime = date('H:i:s', strtotime($_POST["bookingtime"]));
+echo $bookingtime;
+/*
 $studentid = $_SESSION['studentid'];
 
 

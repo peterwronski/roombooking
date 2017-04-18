@@ -16,15 +16,15 @@ include ('dbconnect.php');
 $bookingdate = date('Y-m-d', strtotime($_POST['bookingdate']));
 $bookingtime = date('H:i', strtotime($_POST['bookingtime']));
 $roomid = $_POST['roomid'];
-$userid = $_SESSION['studentid'];
+$studentid = $_SESSION['studentid'];
 
 
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
-$userid = $conn->real_escape_string($userid);
+$studentid = $conn->real_escape_string($studentid);
 
-echo $bookingdate .'<br/>' .$bookingtime .'<br/>' .$roomid .'<br/>' .$_SESSION['studentid'];
+
 
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate' AND booktime='$bookingtime'";
 $sql=$conn->query($query_selectall);
@@ -33,7 +33,7 @@ $sql=$conn->query($query_selectall);
 
 $count = $sql->num_rows;
 
-/*if($count==0){
+if($count==0){
     $query_insertbooking="INSERT INTO booking VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' ";
 
     if ($conn->query($query_insertbooking) === TRUE) {
@@ -46,7 +46,7 @@ $count = $sql->num_rows;
 
 else {
     echo $count .' - Room already booked';
-};*/
+};
 
 $conn->close();
 ?>

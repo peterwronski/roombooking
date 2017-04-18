@@ -15,7 +15,7 @@ $date = date_create($_POST["bookingdate"]);
 */
 
 
-$bookingdate = $_POST["bookingdate"];
+$bookingdate = date_create($_POST["bookingdate"]);
 $bookingtime = $_POST["bookingtime"];
 
 //$date = date_create($bookingdate);

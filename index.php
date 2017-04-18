@@ -68,7 +68,7 @@ include 'header.php';
 
 <?php include('rooms.php'); ?>
 
-<?php include ('addbooking.php'); ?>
+<?php include('booking.php'); ?>
 
 
 

@@ -20,14 +20,17 @@ $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
 $studentid = $conn->real_escape_string($student_id);
 
+echo $bookingtime;
+
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
 $sql=$conn->query($query_selectall);
 
 $count = $sql->num_rows;
 
 if($count>0){
-    $sql=$conn->query("INSERT INTO booking VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' " );
-    if ($conn->query($query) === TRUE) {
+    $query_insertbooking="INSERT INTO booking VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' ";
+
+    if ($conn->query($query_insertbooking) === TRUE) {
         echo 'Booking Added!';
     }
     else{
@@ -36,7 +39,7 @@ if($count>0){
 }
 
 else {
-    echo $count;
+    echo $count .' - Room already booked';
 };
 ?>
 

@@ -9,7 +9,7 @@ if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
     $query = $conn->query("SELECT room_name, room_id FROM room");
 echo '<table class="logintable">
         <form method="POST" action="addbooking.php">
-        <tr><td align="right" class="logintable"> <label>Room name</label></td> <td align="left" ><select id="roomname">
+        <tr><td align="right" class="logintable"> <label>Room name</label></td> <td align="left" ><select id="roomid">
            ';
     while($row = $query->fetch_assoc()) {
                     echo'<option value='.$row["room_id"].'>' .$row["room_name"] .'</option>';

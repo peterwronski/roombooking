@@ -11,14 +11,14 @@ include ('dbconnect.php');
 $roomid = $_POST["roomid"];
 $date = date_create($_POST["bookingdate"]);
 $bookingdate = date_format($date, 'Y/m/d');
-$bookingtime = $_POST["roomdesc"];
+$bookingtime = date('H:i:s', strtotime($_POST["bookingtime"]));
 $studentid = $_SESSION['studentid'];
 
 
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
-$studentid = $conn->real_escape_string($student_id);
+$studentid = $conn->real_escape_string($studentid);
 
 echo $bookingtime;
 

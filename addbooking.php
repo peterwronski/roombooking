@@ -10,8 +10,8 @@ include ('dbconnect.php');
 
 
 
-$bookingdate = date('Y-m-d', strtotime($_POST['bookingdate']));
-$bookingtime = date('H:i', strtotime($_POST['bookingtime']));
+$bookingdate = date('Y-m-d', strtotime($_POST['#bookingdate']));
+$bookingtime = date('H:i', strtotime($_POST['#bookingtime']));
 
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);

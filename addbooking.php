@@ -32,7 +32,7 @@ $count = $sql->num_rows;
 
 
 if($count==0){
-    $query_insertbooking="INSERT INTO booking (student_id, room_id, bookdate, booktime, booking_status) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0' ";
+    $query_insertbooking="INSERT INTO booking (student_id, room_id, bookdate, booktime) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0')";
 
     if ($conn->query($query_insertbooking) === TRUE) {
         echo 'Booking Added!';

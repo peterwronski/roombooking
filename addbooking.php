@@ -11,12 +11,12 @@ include ('dbconnect.php');
 
 
 $roomid = $_POST["roomid"];
-$bookingdate = date_create($_POST["bookingdate"]);
-$bookingdate = date_format($bookingdate, 'd-m-y');
+//$bookingdate = date_create($_POST["bookingdate"]);
+//$bookingdate = date_format($bookingdate, 'd-m-y');
 
 $bookingtime = date_create($_POST["bookingtime"]);
 $bookingtime = date_format($bookingtime, 'y-m-d h:i:s');
-$studentid = $_SESSION['studentid'];
+$user_id = $_SESSION['studentid'];
 
 
 $roomid = $conn->real_escape_string($roomid);
@@ -24,8 +24,8 @@ $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
 $studentid = $conn->real_escape_string($studentid);
 
-echo $bookingdate;
-echo '<br/>' .$bookingtime;
+
+echo $bookingtime .$user_id;
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
 $sql=$conn->query($query_selectall);
 

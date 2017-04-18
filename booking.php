@@ -6,7 +6,7 @@ if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
 
     $query = $conn->query("SELECT room_name, room_id FROM room");
 echo '
-
+<div class="container" id="booking">
 
     <div class="row"><h1 class="bookaroom">Book a room</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">

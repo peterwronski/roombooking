@@ -9,14 +9,14 @@
 include ('dbconnect.php');
 
 
-/*
+
 $roomid = $_POST["roomid"];
-$date = date_create($_POST["bookingdate"]);
-*/
+
+echo $roomid;
 
 
-$bookingdate = date_create($_POST["bookingdate"]);
-$bookingtime = $_POST["bookingtime"];
+$bookingdate = $_POST["bookingdate"];
+//$bookingtime = $_POST["bookingtime"];
 
 //$date = date_create($bookingdate);
 echo $bookingdate;

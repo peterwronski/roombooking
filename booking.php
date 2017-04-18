@@ -2,15 +2,12 @@
 echo'<div class="container" id="booking">
 <div class="row"><h1 class="bookaroom">Book a room</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">';
+
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
     include('dbconnect.php');
 
     $query = $conn->query("SELECT room_name, room_id FROM room");
-echo '
-
-
-    
-<table class="logintable">
+echo '<table class="logintable">
         <form method="POST" action="addbooking.php">
         <tr><td align="right" class="logintable"> <label>Room name</label></td> <td align="left" ><select id="roomname">
            ';

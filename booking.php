@@ -11,7 +11,7 @@ echo '<table class="logintable">
         <form method="POST" action="addbooking.php">
         <tr><td align="right" class="logintable"> <label>Room name</label></td> <td align="left" ><select name="roomid">
            ';
-    while($row = $query->fetch_assoc()) {
+    while($row = $query->fetch_array()) {
                     echo'<option value='.$row["room_id"].'>' .$row["room_name"] .'</option>';
     };
      echo'</select></td></tr>

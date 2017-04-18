@@ -16,9 +16,9 @@ echo '<table class="logintable">
     };
      echo'</select></td></tr>
 
-        <tr><td align="right" class=" logintable"><label>Booking date</label></td><td align="left" class=" logintable"><input type="text" id="bookingdate" placeholder="YYYY\MM\DD"required/></td></tr>
+        <tr><td align="right" class=" logintable"><label>Booking date</label></td><td align="left" class=" logintable"><input type="date" id="bookingdate" value="<?php echo date(\'Y-m-d\'); ?>" required/></td></tr>
              
-        <tr><td align="right" class=" logintable"><label>Booking time</label></td><td align="left" class=" logintable"><input type="text" id="bookingtime" placeholder="HH:MM" required/></td></tr>     
+        <tr><td align="right" class=" logintable"><label>Booking time</label></td><td align="left" class=" logintable"><input type="time" id="bookingtime" value="<?php echo time(\'H-i\'); ?>" required/></td></tr>     
                 
         <tr><td class="logintable" colspan="2" align="center"><input type="submit"/></td></tr>
             

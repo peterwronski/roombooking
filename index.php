@@ -43,54 +43,26 @@ include 'header.php';
 
 <div class="container" id="loginpage">
 
-    <hr/>
-    <div class="row">
+<hr/>
+       <div class="row">
 
-        <div class=" col-lg-6 col-lg-offset-3 loginform">
-            <ul class="nav nav-tabs">
-                <li class="active col-lg-3"><a href="#login" data-toggle="pill">Login</a></li>
-                <li class=" col-lg-3"><a href="#signup"  data-toggle="pill" >Sign up</a></li>
-            </ul>
-            <div class="tab-content">
-                <div id="login" class="tab-pane fade in active">
-                    <form id="login" action ="login.php" method="post">
-                        <div class="form-group">
-                            <label>Email address</label>
-                            <input type="text" class="form-control" id="studentid" name="studentid" placeholder="Student ID">
-                        </div>
-                        <div class="form-group">
-                            <label for="password1">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                        </div>
+           <h1>Check your booking</h1>
+           <div class="col-lg-4 col-lg-offset-4 loginform">
+               <table class="logintable">
+                   <form action="login.php" method="POST">
+                        <tr><td class="logintable"><label><b>Student ID</b></label></td>
+                            <td class="logintable"><input type="text" name="studentid" placeholder="Student ID" id="studentid" required/></td>
+                        </tr>
+                       <tr><td class="logintable"><label><b>Password</b></label></td>
+                           <td class="logintable"><input type="password" name="password" id="password" required/></td>
+                       </tr>
 
-                        <button type="submit" name="login-btn" class="btn btn-default">Submit</button>
-                    </form>
-                </div>
-                <div id="signup" class="tab-pane fade">
-                    <form id="register" action ="register.php" method="post">
-                        <div class="form-group">
-                            <label>Student ID</label>
-                            <input type="text" class="form-control" id="studentid" name="studentid" placeholder="Student ID">
-                        </div>
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label>Confirm Password</label>
-                            <input type="password" class="form-control" id="password2" name="password2" placeholder="Password">
-                        </div>
-
-                        <button type="submit" name ="signup-btn" class="btn btn-default">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                       <tr><td  class="logintable" colspan="2" align="center"><input type="submit" name="login-submit"/></td></tr>
+                       <tr><td  class="logintable" colspan="2" align="center"><a href="register.php">Click here </a> to register</td></tr>
+               </form>
+               </table>
+           </div>
+       </div>
 </div>
 
 

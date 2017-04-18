@@ -2,7 +2,7 @@
 
 include('header.php');
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)){
-//echo $_SESSION['studentid'];
+//echo $_SESSION['studentid'] --WORKS;
     header("Location:index.php");
 }
 

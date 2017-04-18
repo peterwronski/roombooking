@@ -21,4 +21,5 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
     }
 
 };
+$conn->close();
 ?>

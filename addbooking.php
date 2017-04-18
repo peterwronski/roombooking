@@ -6,6 +6,8 @@
  * Time: 15:01
  */
 //start_session();
+
+
 include ('dbconnect.php');
 
 
@@ -41,5 +43,7 @@ $count = $sql->num_rows;
 else {
     echo $count .' - Room already booked';
 };*/
+
+$conn->close();
 ?>
 

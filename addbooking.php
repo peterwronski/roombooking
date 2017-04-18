@@ -22,7 +22,7 @@ $bookingtime = $conn->real_escape_string($bookingtime);
 
 echo $_SESSION['studentid'];
 
-$query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate'";
+$query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate' AND booktime='$bookingtime'";
 $sql=$conn->query($query_selectall);
 
 $count = $sql->num_rows;

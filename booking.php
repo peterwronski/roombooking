@@ -12,7 +12,7 @@ echo '
         <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table class="logintable">
         <form method="POST" action="addbooking.php">
-        <tr><td class="logintable"> <label>Room name</label></td> <td><select id="roomname">
+        <tr><td align="right" class="logintable"> <label>Room name</label></td> <td align="left" class="logintable" ><select id="roomname">
            ';
     while($row = $query->fetch_assoc()) {
                     echo'<option value='.$row["room_id"].'>' .$row["room_name"] .'</option>';

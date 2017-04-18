@@ -17,13 +17,13 @@ $bookingdate = date('Y-m-d', strtotime($_POST['bookingdate']));
 $bookingtime = date('H:i', strtotime($_POST['bookingtime']));
 $roomid = $_POST['roomid'];
 $studentid = $_SESSION['studentid'];
-
+$specreq = $_POST['specreq'];
 
 $roomid = $conn->real_escape_string($roomid);
 $bookingdate = $conn->real_escape_string($bookingdate);
 $bookingtime = $conn->real_escape_string($bookingtime);
 $studentid = $conn->real_escape_string($studentid);
-
+$specreq = $conn->real_escape_string($specreq);
 
 
 $query_selectall = "SELECT * FROM booking WHERE room_id= '$roomid' AND bookdate = '$bookingdate' AND booktime='$bookingtime'";
@@ -32,8 +32,12 @@ $count = $sql->num_rows;
 
 
 if($count==0){
-    $query_insertbooking="INSERT INTO booking (student_id, room_id, bookdate, booktime, booking_status) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0')";
-
+    if(empty($specreq) {
+        $query_insertbooking = "INSERT INTO booking (student_id, room_id, bookdate, booktime, booking_status) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0')";
+    }
+    else{
+        $query_insertbooking = "INSERT INTO booking (student_id, room_id, bookdate, booktime, booking_status, spec_req) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0','$specreq')";
+    }
     if ($conn->query($query_insertbooking) === TRUE) {
         echo 'Booking Added!';
     }

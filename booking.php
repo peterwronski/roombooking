@@ -1,6 +1,6 @@
 <?php
 echo'<div class="container" id="booking">
-<div class="row"><h1 class="bookaroom">Book a room</h1>
+<div class="row"><h1>Book a room</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">';
 
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {

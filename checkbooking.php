@@ -13,7 +13,7 @@ $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookd
 //$row=$query->fetch_array();
 
 
-switch ($row['booking_status']){
+switch ($row){
     case '0':
         $_SESSION['bookingstatus']='Awaiting Response';
         break;

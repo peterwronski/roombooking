@@ -35,7 +35,7 @@ if ($query->num_rows > 0) {
          <th  class="rooms">Booking Time</th>
          <th  class="rooms">Booking Date</th>
          <th  class="rooms">Special requirements</th>
-         <th  class="rooms">Booking status</th>';
+         <th  class="rooms">Booking status</th></tr>';
 
     // output data of each row
     do {

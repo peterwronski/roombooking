@@ -39,7 +39,10 @@ if($count==0){
         $query_insertbooking = "INSERT INTO booking (student_id, room_id, bookdate, booktime, booking_status, spec_req) VALUES ('$studentid','$roomid','$bookingdate','$bookingtime','0','$specreq')";
     }
     if ($conn->query($query_insertbooking) === TRUE) {
-        echo 'Booking Added!';
+        $_SESSION['bookingaddedmsg'] = '<div class="alert alert-success">
+  <strong>Success!</strong> Booking added!
+</div>';
+        header("Location: index.php");
     }
     else{
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -47,7 +50,9 @@ if($count==0){
 }
 
 else {
-    echo $count .' - Room already booked';
+    $_SESSION['bookingtakenmsg'] = '<div class="alert alert-danger">
+  <strong>Booking unavailable!</strong> Try picking another time or room</div>';
+    header("Location: index.php");
 };
 
 $conn->close();

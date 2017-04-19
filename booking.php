@@ -29,7 +29,14 @@ echo '<table class="logintable">
                 
         </form>
         </table>
-        </div>
+        </div>';
+         if (isset($_SESSION['bookingaddedmsg'])){
+                echo $_SESSION['bookingaddedmsg'];
+            };
+         if (isset($_SESSION['bookingtakenmsg'])){
+                echo $_SESSION['bookingtakenmsg'];
+            };
+         echo'
     </div>
 </div>
         ';

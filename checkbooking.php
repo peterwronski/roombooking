@@ -60,7 +60,7 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
     }
 } else {
-    echo "0 results";
+    echo "No bookings to show at the moment";
 }
 echo '</table>';
 $conn->close();

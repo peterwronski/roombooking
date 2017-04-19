@@ -13,21 +13,7 @@ $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookd
 //$row=$query->fetch_array();
 
 
-switch ($row){
-    case '0':
-        $_SESSION['bookingstatus']='Awaiting Response';
-        break;
-    case '1':
-        $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
-        break;
-    case '2':
-        $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
-    break;
-    default:
-        $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
-        break;
 
-};
 
 echo '
 <div class="container" id="checkbooking">
@@ -46,6 +32,23 @@ echo '
     </tr>';
 
 if ($query->num_rows > 0) {
+
+    switch ($row){
+        case '0':
+            $_SESSION['bookingstatus']='Awaiting Response';
+            break;
+        case '1':
+            $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+            break;
+        case '2':
+            $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+            break;
+        default:
+            $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
+            break;
+
+    };
+
     // output data of each row
     while($row=$query->fetch_assoc()) {
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .

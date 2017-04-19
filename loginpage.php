@@ -1,7 +1,4 @@
-<div class="container" id="loginpage">
 
-    <hr/>
-    <div class="row">
 
         <h1>Check your booking</h1>
         <div class="col-lg-4 col-lg-offset-4 loginform">
@@ -19,5 +16,3 @@
                 </form>
             </table>
         </div>
-    </div>
-</div>

@@ -3,7 +3,7 @@
 include('header.php');
 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)){
 //echo $_SESSION['studentid'] --WORKS;
-    header("Location:index#booking.php");
+    header("Location:index.php#booking");
 }
 
 else {

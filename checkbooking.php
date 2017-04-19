@@ -15,14 +15,17 @@ $row=$query->fetch_array();
 
 function bookingStatus($row){
     switch ($row['booking_status']){
-        case '1':
+        case '0':
             echo'Awaiting Response';
             break;
-        case '2':
+        case '1':
             echo'<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
             break;
-        case '3':
+        case '2':
             echo'<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+
+        default:
+            echo 'Looks like something is wrong with your booking.';
 
     }
 }

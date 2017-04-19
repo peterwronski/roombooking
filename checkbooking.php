@@ -7,6 +7,7 @@
  */
 session_start();
 include('dbconnect.php');
+
 $studentid = $_SESSION['studentid'];
 $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
 $row=$query->fetch_array();
@@ -21,7 +22,7 @@ switch ($row['booking_status']){
         break;
     case '2':
         $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
-
+    break;
     default:
         $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
         break;
@@ -36,7 +37,7 @@ switch ($row['booking_status']){
 echo '
 <div class="container" id="checkbooking">
 <hr/>
-    <div class="row"><h1>Check you booking @ RGU</h1>
+    <div class="row"><h1>Check your booking @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table class="rooms">
     <tr> <th  class="rooms">Student ID</th>

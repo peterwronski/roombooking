@@ -26,6 +26,7 @@ function bookingStatus($row){
 
         default:
             echo 'Looks like something is wrong with your booking.';
+            break;
 
     }
 }

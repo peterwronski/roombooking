@@ -9,7 +9,7 @@ session_start();
 include('dbconnect.php');
 
 $studentid = $_SESSION['studentid'];
-$query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, room.specreq, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
+$query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, room.spec_req, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
 $row=$query->fetch_array();
 
 
@@ -58,7 +58,7 @@ if ($query->num_rows > 0) {
              "</td><td class=\"rooms\">". $row['room_name'] .
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
-            "</td><td class=\"rooms\">". $row['specreq'] .
+            "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
     }
 } else {

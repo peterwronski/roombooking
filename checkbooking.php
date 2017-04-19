@@ -45,6 +45,7 @@ echo '
          <th  class="rooms">Room Name</th>
          <th  class="rooms">Booking Time</th>
          <th  class="rooms">Booking Date</th>
+         <th  class="rooms">Special requirements</th>
          <th  class="rooms">Booking status</th>
         
     </tr>';
@@ -57,6 +58,7 @@ if ($query->num_rows > 0) {
              "</td><td class=\"rooms\">". $row['room_name'] .
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
+            "</td><td class=\"rooms\">". $row['specreq'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
     }
 } else {

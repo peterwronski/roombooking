@@ -13,7 +13,7 @@ $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookd
 //$row=$query->fetch_array();
 
 
-
+$_SESSION['bookingstatus']='';
 
 echo '
 <div class="container" id="checkbooking">

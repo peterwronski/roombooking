@@ -62,6 +62,24 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
+
+        switch ($row['booking_status']){
+            case '0':
+                $_SESSION['bookingstatus']='Awaiting Response';
+                break;
+            case '1':
+                $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+                break;
+            case '2':
+                $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+                break;
+            default:
+                $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
+                break;
+
+        };
+
+
     }while($row=$query->fetch_array());
 } else {
     echo "No bookings to show at the moment";

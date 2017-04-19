@@ -54,7 +54,7 @@ if ($query->num_rows > 0) {
          <th  class="rooms">Booking status</th>';
 
     // output data of each row
-    while($row=$query->fetch_array()) {
+    do {
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
              "</td><td class=\"rooms\">" . $row['room_id'] .
              "</td><td class=\"rooms\">". $row['room_name'] .
@@ -62,7 +62,7 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
-    }
+    }while($row=$query->fetch_array());
 } else {
     echo "No bookings to show at the moment";
 }

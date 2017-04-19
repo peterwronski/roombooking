@@ -1,7 +1,7 @@
 
 
 
-        <div class="col-lg-8 col-lg-offset-4 loginform">
+        <div class="col-lg-8 col-lg-offset-2 loginform">
             <table class="logintable">
                 <form action="login.php" method="POST">
                     <tr><td class="logintable"><label><b>Student ID</b></label></td>

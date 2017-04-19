@@ -10,9 +10,9 @@ include('dbconnect.php');
 
 $studentid = $_SESSION['studentid'];
 $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, booking.spec_req, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
-$row=$query->fetch_array();
+//$row=$query->fetch_array();
 
-
+/*
 switch ($row['booking_status']){
     case '0':
         $_SESSION['bookingstatus']='Awaiting Response';
@@ -27,12 +27,7 @@ switch ($row['booking_status']){
         $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
         break;
 
-};
-
-
-
-
-
+};*/
 
 echo '
 <div class="container" id="checkbooking">

@@ -33,7 +33,7 @@ echo '
 
 if ($query->num_rows > 0) {
 
-    switch ($row){
+    switch ($row['booking_status']){
         case '0':
             $_SESSION['bookingstatus']='Awaiting Response';
             break;

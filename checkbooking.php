@@ -22,9 +22,7 @@ echo '
 <hr/>
     <div class="row"><h1>Check your booking @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
-
-        
-    </tr>';
+';
 
 if ($query->num_rows > 0) {
 

@@ -26,19 +26,20 @@ echo '
 
 if ($query->num_rows > 0) {
 
-    switch ($row['booking_status']){
+    switch ($row['booking_status']) {
         case '0':
-            $_SESSION['bookingstatus']='Awaiting Response';
+            $_SESSION['bookingstatus'] = 'Awaiting Response';
             break;
         case '1':
-            $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
             break;
         case '2':
-            $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
             break;
         default:
-            $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
+            $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
             break;
+    }
 
     echo'<table class="rooms">
     <tr> <th  class="rooms">Student ID</th>

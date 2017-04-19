@@ -12,24 +12,26 @@ $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookd
 $row=$query->fetch_array();
 
 
+switch ($row['booking_status']){
+    case '0':
+        $_SESSION['bookingstatus']='Awaiting Response';
+        break;
+    case '1':
+        $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+        break;
+    case '2':
+        $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
 
-function bookingStatus($row){
-    switch ($row['booking_status']){
-        case '0':
-            echo'Awaiting Response';
-            break;
-        case '1':
-            echo'<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
-            break;
-        case '2':
-            echo'<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+    default:
+        $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
+        break;
 
-        default:
-            echo 'Looks like something is wrong with your booking.';
-            break;
+};
 
-    }
-}
+
+
+
+
 
 echo '
 <div class="container" id="checkbooking">
@@ -54,7 +56,7 @@ if ($query->num_rows > 0) {
              "</td><td class=\"rooms\">". $row['room_name'] .
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
-            "</td><td class=\"rooms\">" .bookingStatus($row) .'</td></tr>';
+            "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
     }
 } else {
     echo "0 results";

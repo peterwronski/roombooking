@@ -8,7 +8,7 @@
 session_start();
 include('dbconnect.php');
 $studentid = $_SESSION['studentid'];
-$query = $conn->query("SELECT student_id.booking, room_id.booking, bookdate.booking, booktime.booking, bookingstatus.booking, room_name.room FROM booking, room WHERE room_id.booking = room_id.room AND student_id='$studentid'");
+$query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
 $row=$query->fetch_array();
 
 echo $row;

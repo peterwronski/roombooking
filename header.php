@@ -84,14 +84,14 @@
                     echo '<li><a href="#top">Home</a></li>
                 <li><a href="#rooms">Our Rooms</a></li>
                 <li><a href="#booking">Book a Room</a></li>
-                <li><a href="#rooms">Check Your Bookings</a></li>
+                <li><a href="#checkbooking">Check Your Bookings</a></li>
                 ';
                 }
                 else {
                     echo '<li><a href="index.php#top">Home</a></li>
                 <li><a href="index.php#rooms">Our Rooms</a></li>
                 <li><a href="index.php#booking">Book a Room</a></li>
-                <li><a href="index.php#rooms">Check Your Bookings</a></li>';
+                <li><a href="index.php#checkbooking">Check Your Bookings</a></li>';
                 }
 
                 ?>

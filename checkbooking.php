@@ -39,18 +39,21 @@ echo '
 <hr/>
     <div class="row"><h1>Check your booking @ RGU</h1>
         <div class="col-lg-8 col-lg-offset-2 contentbox">
-<table class="rooms">
+
+        
+    </tr>';
+
+if ($query->num_rows > 0) {
+
+    echo'<table class="rooms">
     <tr> <th  class="rooms">Student ID</th>
          <th  class="rooms">Room ID</th>
          <th  class="rooms">Room Name</th>
          <th  class="rooms">Booking Time</th>
          <th  class="rooms">Booking Date</th>
          <th  class="rooms">Special requirements</th>
-         <th  class="rooms">Booking status</th>
-        
-    </tr>';
+         <th  class="rooms">Booking status</th>';
 
-if ($query->num_rows > 0) {
     // output data of each row
     while($row=$query->fetch_array()) {
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .

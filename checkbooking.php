@@ -5,11 +5,13 @@
  * Date: 19/04/2017
  * Time: 13:52
  */
-
+session_start();
 include('dbconnect.php');
-
-$query = $conn->query("SELECT student_id, room_id, bookdate, booktime, bookingstatus, room_name FROM booking, room WHERE room_id.booking = room_id.room");
+$studentid = $_SESSION['studentid'];
+$query = $conn->query("SELECT student_id.booking, room_id.booking, bookdate.booking, booktime.booking, bookingstatus.booking, room_name.room FROM booking, room WHERE room_id.booking = room_id.room AND student_id='$studentid'");
 $row=$query->fetch_array();
+
+echo $row;
 
 function bookingStatus($row){
     switch ($row['booking_status']){

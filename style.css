@@ -59,7 +59,7 @@ table.rooms, th.rooms, td.rooms{
 }
 
 table.logintable, th.logintable, td.logintable{
-
+    width:inherit;
     word-wrap: normal;
     padding: 5px;
     margin-top: 1%;

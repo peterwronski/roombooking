@@ -103,10 +103,8 @@
                 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
                     echo'<p class="navbar-text">Welcome ' .$_SESSION['userloggedin'] .'</p></li>
                 <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Log out</a></li>';
-                }
-                else{
-                    echo'<li><a href="#loginpage"><span class="glyphicon glyphicon-user"></span> Sign Up / Login</a></li>';
                 };
+
                 ?>
             </ul>
         </div>

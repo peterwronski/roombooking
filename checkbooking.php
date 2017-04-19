@@ -35,7 +35,7 @@ if ($query->num_rows > 0) {
     // output data of each row
     while($row=$query->fetch_assoc()) {
 
-        switch ($row['booking_status']){
+        switch ($row){
             case '0':
                 $_SESSION['bookingstatus']='Awaiting Response';
                 break;

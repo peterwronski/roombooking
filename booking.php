@@ -44,6 +44,8 @@ else{
   <strong>You need to be logged in to book a room or check bookings</strong> Please <a href="#loginpage">click here to log in</a> or <a href="register.php">here to register</a>
         </div>
      ';
+
+    include('loginpage.php');
 }
 
 //$row=$query->fetch_array();

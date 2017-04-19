@@ -10,10 +10,10 @@ include('dbconnect.php');
 
 $studentid = $_SESSION['studentid'];
 $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, booking.spec_req, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
+$row=$query->fetch_assoc();
 
 
-
-
+$count = $query->num_rows;
 
 
 
@@ -24,7 +24,7 @@ echo '
         <div class="col-lg-8 col-lg-offset-2 contentbox">
 ';
 
-if ($query->num_rows > 0) {
+if ($count > 0) {
 
     switch ($row['booking_status']) {
         case '0':
@@ -50,7 +50,7 @@ if ($query->num_rows > 0) {
          <th  class="rooms">Special requirements</th>
          <th  class="rooms">Booking status</th></tr>';
 
-
+$i=0;
     // output data of each row
     do {
 
@@ -63,12 +63,12 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
 
-
+    $i++;
 
         }
 
 
-    while($row=$query->fetch_assoc());
+    while($count>=$i);
 
 }
  else {

@@ -1,7 +1,10 @@
 
 
+    <hr/>
+    <div class="row">
 
-        <div class="col-lg-8 col-lg-offset-2 loginform">
+        <h1>Check your booking</h1>
+        <div class="col-lg-4 col-lg-offset-4 loginform">
             <table class="logintable">
                 <form action="login.php" method="POST">
                     <tr><td class="logintable"><label><b>Student ID</b></label></td>
@@ -16,3 +19,4 @@
                 </form>
             </table>
         </div>
+    </div>

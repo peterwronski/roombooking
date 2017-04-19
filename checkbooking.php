@@ -68,7 +68,7 @@ $i=0;
         }
 
 
-    while($count>=$i);
+    while($count>$i);
 
 }
  else {

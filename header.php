@@ -106,11 +106,12 @@
                 };
 
                 if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
-                    echo'<a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN MENU
+                    echo'<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN MENU
         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="addroom.php">Add Room</a></li>
-                         </ul>  ';
+                         </ul> 
+                          </li>';
 
                 }
 

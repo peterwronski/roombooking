@@ -12,23 +12,7 @@ $studentid = $_SESSION['studentid'];
 $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, booking.spec_req, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
 
 
-function bookingStatus($row)
-{
-    switch ($row['booking_status']) {
-        case '0':
-            $_SESSION['bookingstatus'] = 'Awaiting Response';
-            break;
-        case '1':
-            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
-            break;
-        case '2':
-            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
-            break;
-        default:
-            $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
-            break;
-    }
-};
+
 
 
 
@@ -41,6 +25,20 @@ echo '
 ';
 
 if ($query->num_rows > 0) {
+
+    switch ($row['booking_status']){
+        case '0':
+            $_SESSION['bookingstatus']='Awaiting Response';
+            break;
+        case '1':
+            $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+            break;
+        case '2':
+            $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+            break;
+        default:
+            $_SESSION['bookingstatus']= 'Looks like something is wrong with your booking.';
+            break;
 
     echo'<table class="rooms">
     <tr> <th  class="rooms">Student ID</th>
@@ -62,7 +60,7 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
-            "</td><td class=\"rooms\">" .bookingStatus($row['booking_status']) .'</td></tr>';
+            "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
 
 
 

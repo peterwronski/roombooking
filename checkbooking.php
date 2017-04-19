@@ -64,7 +64,7 @@ if ($query->num_rows > 0) {
         };
 
 
-    }while($row=$query->fetch_array());
+    }while($row=$query->fetch_assoc());
 } else {
     echo "No bookings to show at the moment";
 }

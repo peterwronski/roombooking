@@ -101,7 +101,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <?php
                 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
-                    echo'Welcome ' .$_SESSION['userloggedin'] .'</li>
+                    echo'<p class="navbar-text">Welcome ' .$_SESSION['userloggedin'] .'</p></li>
                 <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Log out</a></li>';
                 }
                 else{

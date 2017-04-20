@@ -48,14 +48,22 @@ $count=$check_studentid->num_rows;
 if($count==0){
     $adduser="INSERT INTO users(student_id, name, pword) VALUES('$studentid','$name','$hashAndSalt')";
     if($conn->query($adduser) === TRUE){
-        echo'USER REGISTERED';
+       echo' <script type="text/javascript">
+            alert("You\'ve made an account.");
+
+    window.location = "index.php#loginpage"
+        </script>';
     }
     else{
         echo'there\'s been an error';
     }
 }
 else{
-    echo'STUDENT ID ALREADY REGISTERED';
+    echo' <script type="text/javascript">
+            alert("This student ID is already registered. Log in using your password, or try another student ID.");
+
+    window.location = "index.php#loginpage"
+        </script>';
 }
 
 ?>

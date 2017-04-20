@@ -13,7 +13,7 @@ $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookd
 //$row=$query->fetch_array();
 
 
-$_SESSION['bookingstatus']='';
+
 
 echo '
 <div class="container" id="checkbooking">
@@ -35,7 +35,7 @@ if ($query->num_rows > 0) {
     // output data of each row
     switch ($row){
         case '0':
-            $_SESSION['bookingstatus']='Awaiting Response';
+            $_SESSION['bookingstatus']="Awaiting Response";
             break;
         case '1':
             $_SESSION['bookingstatus']='<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';

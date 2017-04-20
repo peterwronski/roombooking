@@ -6,7 +6,7 @@
  * Time: 08:47
  */
 
-if (($_POST['password']!=$_POST['password2'])) {// this checks to see if both password fields are a match
+/*if (($_POST['password']!=$_POST['password2'])) {// this checks to see if both password fields are a match
     echo'<script type="text/javascript">
         alert("Your passwords aren\'t matching. Please make sure your passwords match before submitting the form.");
 
@@ -28,7 +28,7 @@ if ($_POST['name']=='sysAdmin' || $_POST['name']=='sysadmin' ){// this makes sur
 
     window.location = "index.php#loginpage"
         </script>';
-}
+}*/
 
 $studentid = strip_tags($_POST['studentid']);
 $name = strip_tags($_POST['name']);
@@ -41,10 +41,10 @@ $password = $conn->real_escape_string($password);
 $hashAndSalt = password_hash($password, PASSWORD_BCRYPT);
 
 $check_studentid = $conn->query("SELECT student_id FROM user WHERE student_id='$studentid'");
-$count=$check_email->num_rows;
+$count=$check_studentid->num_rows;
 
 if($count==0){
-    $adduser="INSERT INTO user(student_id, name, password) VALUES('$student_id','$name','$hashAndSalt')";
+    $adduser="INSERT INTO user(student_id, name, pword) VALUES('$student_id','$name','$hashAndSalt')";
     if($conn->query($adduser) === TRUE){
         echo'USER REGISTERED';
     }

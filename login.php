@@ -30,14 +30,14 @@ $password = $conn->real_escape_string($password);
 
 
 
-$query = $conn->query("SELECT student_id, password, name FROM users WHERE student_id='$studentid'");
+$query = $conn->query("SELECT student_id, pword, name FROM users WHERE student_id='$studentid'");
 
 $row=$query->fetch_array();
 
 $count = $query->num_rows; // if email/password are correct returns must be 1 row
 
 
-if (password_verify($password, $row['password']) && $count==1) {
+if (password_verify($password, $row['pword']) && $count==1) {
     $_SESSION['userSession'] = $row['username'];
     $_SESSION['studentid'] = $row['student_id'];
     header("Location: landing.php");

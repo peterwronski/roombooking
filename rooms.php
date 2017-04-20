@@ -20,7 +20,7 @@ echo '
         <div class="col-lg-8 col-lg-offset-2 contentbox">
 <table class="rooms">
     <tr> <th  class="rooms">Room Name</th>
-         <th  class="rooms">Room Size</th>
+         <th  class="rooms">Room Size (Desks/PCs)</th>
          <th  class="rooms">Room Description</th>
     </tr>';
 

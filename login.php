@@ -40,7 +40,7 @@ $count = $query->num_rows; // if email/password are correct returns must be 1 ro
 if (password_verify($password, $row['pword']) && $count==1) {
     $_SESSION['userSession'] = $row['username'];
     $_SESSION['studentid'] = $row['student_id'];
-    header("Location: landing.php");
+    header("Location: index.php#booking");
 }
 else {
     header("Location: login_failed.php");

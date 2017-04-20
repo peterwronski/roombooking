@@ -30,26 +30,18 @@ $password = $conn->real_escape_string($password);
 
 
 
-$query = $conn->query("SELECT student_id, password, name FROM users WHERE student_id='$studentid' AND password= '$password'");
+$query = $conn->query("SELECT student_id, password, name FROM users WHERE student_id='$studentid'");
 
 $row=$query->fetch_array();
 
 $count = $query->num_rows; // if email/password are correct returns must be 1 row
 
 
-
-
-
-
-
-// If result matched $myusername and $mypassword, table row must be 1 row
-if ($count==1) {
-    $_SESSION['userloggedin'] = $row['name'];
+if (password_verify($password, $row['password']) && $count==1) {
+    $_SESSION['userSession'] = $row['username'];
     $_SESSION['studentid'] = $row['student_id'];
-
-    header("Location: login_success.php");
+    header("Location: landing.php");
 }
-
 else {
     header("Location: login_failed.php");
 }

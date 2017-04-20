@@ -8,7 +8,7 @@
 
 ?>
 
-<div class="container" id="loginpage">
+<div class="container" id="register">
 
     <hr/>
     <div class="row">

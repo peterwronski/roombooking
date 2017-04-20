@@ -112,7 +112,7 @@
         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="addroom.php">Add Room</a></li>
-                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="checkbooking_sys.php">Manage Bookings</a></li>
                          </ul> 
                           </li>';
 

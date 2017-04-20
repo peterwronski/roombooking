@@ -41,8 +41,8 @@ $name = $conn->real_escape_string($name);
 $password = $conn->real_escape_string($password);
 //var_dump($studentid, $name, $password);
 $hashAndSalt = password_hash($password, PASSWORD_DEFAULT);
-var_dump($hashAndSalt);
-/*$check_studentid = $conn->query("SELECT student_id FROM user WHERE student_id='$studentid'");
+//var_dump($hashAndSalt);
+$check_studentid = $conn->query("SELECT student_id FROM user WHERE student_id='$studentid'");
 $count=$check_studentid->num_rows;
 
 if($count==0){
@@ -56,6 +56,6 @@ if($count==0){
 }
 else{
     echo'STUDENT ID ALREADY REGISTERED';
-}*/
+}
 
 ?>

@@ -5,6 +5,8 @@
  * Date: 20/04/2017
  * Time: 00:57
  */
+
+include('dbconnect.php');
 if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
     $roomid = $_POST["roomid"];
     $roomname = $_POST["roomname"];

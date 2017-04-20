@@ -1,6 +1,6 @@
 <?php
 include ('header.php');
-include('dbconnect.php');
+
 echo'<div class="container" id="#addroom">
 
         <div class="row">

@@ -55,6 +55,7 @@ if ($query->num_rows > 0) {
         $updatestatus="UPDATE booking SET booking_status='$bookingstatusadmin' WHERE book_id='$bookid'";
         $conn->query($updatestatus);
     };
+    echo'</table>';
 
 } else {
     echo "<p>No bookings to show at the moment</p>";

@@ -39,10 +39,10 @@ echo '
         
     </tr>';
 
-
-function assignStatus($row)
+$bookingStatus = $row['booking_status'];
+function assignStatus($bookingStatus)
 {
-    switch ($row) {
+    switch ($bookingStatus) {
         case '0':
             $_SESSION['bookingstatus'] = "Awaiting Response";
             break;

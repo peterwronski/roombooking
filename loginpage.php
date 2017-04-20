@@ -15,7 +15,7 @@
                     </tr>
 
                     <tr><td  class="logintable" colspan="2" align="center"><input type="submit" name="login-submit"/></form></td></tr>
-                    <tr><td  class="logintable" colspan="2" align="center"><button id="registerbtn">Click here </button> to register</td></tr>
+                <tr><td  class="logintable" colspan="2" align="center"><form action="index.php#register"><button id="registerbtn">Click here to register</button></form></td></tr>
 
             </table>
         </div>

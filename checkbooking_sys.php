@@ -45,14 +45,13 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
-            '</td><td class=\"rooms\"> <form method="POST"><select name="bookingstatusadmin" selected='.$row['booking_status'].'> <option value="0">Awaiting Approval</option>
-                                                                   <option value="1">Approve</option>
-                                                                   <option value="2">Deny</option></select></td></tr>';
+            '</td><td class=\"rooms\"> <form method="POST"><input type="radio" name="bookingstatus" value="1"> Approve <br/>
+                                                           <input type="radio" name="bookingstatus" value="2"> Deny  </td></tr>';
 
     };
     $bookid=$row['book_id'];
-    $bookingstatusadmin=$_POST['bookingstatusadmin'];
-    $updatestatus="UPDATE booking SET booking_status='$bookingstatusadmin' WHERE book_id='$bookid'";
+    $bookingstatus=$_POST['bookingstatus'];
+    $updatestatus="UPDATE booking SET booking_status='$bookingstatus' WHERE book_id='$bookid'";
     $conn->query($updatestatus);
     if ($conn->query($updatestatus) === TRUE){
         echo'<h1>The thing worked</h1>';

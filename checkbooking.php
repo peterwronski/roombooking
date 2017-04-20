@@ -64,7 +64,7 @@ if ($query->num_rows > 0) {
 
 $i=0;
      while($query->num_rows>$i){
-         assignStatus($row);
+         assignStatus($bookingStatus);
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
              "</td><td class=\"rooms\">" . $row['room_id'] .
              "</td><td class=\"rooms\">". $row['room_name'] .

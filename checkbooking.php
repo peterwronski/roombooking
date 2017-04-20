@@ -46,7 +46,7 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
-            "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
+            "</td><td class=\"rooms\">" .$row['booking_status'] .'</td></tr>';
          };
 
     switch ($row) {

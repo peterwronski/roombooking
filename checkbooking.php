@@ -12,17 +12,6 @@ $studentid = $_SESSION['studentid'];
 $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, booking.spec_req, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
 
 
-
-
-
-
-
-
-
-
-
-
-
 echo '
 <div class="container" id="checkbooking">
 <hr/>
@@ -40,29 +29,29 @@ echo '
     </tr>';
 
 //$bookingStatus = $row['booking_status'];
-/*function assignStatus($bookingStatus)
-{
-    switch ($bookingStatus) {
-        case '0':
-            $_SESSION['bookingstatus'] = "Awaiting Response";
-            break;
-        case '1':
-            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
-            break;
-        case '2':
-            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
-            break;
-        default:
-            $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
-            break;
-    };
-}*/
+
+
 
 
 if ($query->num_rows > 0) {
     // output data of each row
 
      while($row=mysqli_fetch_assoc($query)){
+
+         switch ($row) {
+             case '0':
+                 $_SESSION['bookingstatus'] = "Awaiting Response";
+                 break;
+             case '1':
+                 $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+                 break;
+             case '2':
+                 $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+                 break;
+             default:
+                 $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
+                 break;
+         };
 
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
              "</td><td class=\"rooms\">" . $row['room_id'] .
@@ -71,7 +60,6 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
-
          };
 
 } else {

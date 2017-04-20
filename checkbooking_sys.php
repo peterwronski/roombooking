@@ -45,7 +45,7 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
-            '</td><td class=\"rooms\"> <form method="POST"><select id="bookingstatusadmin"> <option value="0">Awaiting Approval</option>
+            '</td><td class=\"rooms\"> <form method="POST"><select id="bookingstatusadmin" selected='.$row['booking_status'].'> <option value="0">Awaiting Approval</option>
                                                                    <option value="1">Approve</option>
                                                                    <option value="2">Deny</option></select></td></tr>';
 
@@ -58,7 +58,7 @@ if ($query->num_rows > 0) {
         echo'<h1>The thing worked</h1>';
     }
     else{
-        echo'I fucked up';
+        echo'<h1>I fucked up</h1>';
     }
     echo'<tr><td colspan="8"><input type="submit"></input></td></tr>
 </form>

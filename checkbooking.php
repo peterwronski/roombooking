@@ -62,7 +62,7 @@ echo '
 if ($query->num_rows > 0) {
     // output data of each row
 
-     while($row=$query->fetch_assoc()){
+     while($row=mysqli_fetch_assoc($query)){
 
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
              "</td><td class=\"rooms\">" . $row['room_id'] .

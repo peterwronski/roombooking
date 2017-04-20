@@ -5,9 +5,9 @@
  * Date: 20/04/2017
  * Time: 02:57
  */
-
+session_start();
 include('dbconnect.php');
-if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
+
     $roomid = $_POST["roomid"];
     $roomname = $_POST["roomname"];
     $roomsize = $_POST["roomsize"];
@@ -31,6 +31,6 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-};
+
 $conn->close();
 ?>

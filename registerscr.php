@@ -39,9 +39,9 @@ $password = $_POST['password'];
 $studentid = $conn->real_escape_string($studentid);
 $name = $conn->real_escape_string($name);
 $password = $conn->real_escape_string($password);
-var_dump($studentid, $name, $password);
-//$hashAndSalt = password_hash($password, PASSWORD_DEFAULT);
-//var_dump($hashed_password);
+//var_dump($studentid, $name, $password);
+$hashAndSalt = password_hash($password, PASSWORD_DEFAULT);
+var_dump($hashed_password);
 /*$check_studentid = $conn->query("SELECT student_id FROM user WHERE student_id='$studentid'");
 $count=$check_studentid->num_rows;
 

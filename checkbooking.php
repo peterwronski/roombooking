@@ -10,11 +10,11 @@ include('dbconnect.php');
 
 $studentid = $_SESSION['studentid'];
 $query = $conn->query("SELECT booking.student_id, booking.room_id, booking.bookdate, booking.booktime, booking.booking_status, booking.spec_req, room.room_name FROM booking, room WHERE booking.room_id = room.room_id AND student_id='$studentid'");
-//$row=$query->fetch_array();
+$row=$query->fetch_assoc();
 
-$var=2;
 
-switch ($var){
+
+switch ($row){
     case '0':
         $_SESSION['bookingstatus']="Awaiting Response";
         break;
@@ -31,11 +31,8 @@ switch ($var){
 };
 
 
-echo $_SESSION['bookingstatus'];
 
-/*
- *
- *
+
 
 
 
@@ -59,8 +56,8 @@ echo '
 if ($query->num_rows > 0) {
     // output data of each row
 
-
-    while($row=$query->fetch_assoc()) {
+$i=0;
+    while($query->num_rows>$i) {
 
 
 
@@ -71,6 +68,7 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
+        $i++;
     };
 } else {
     echo "No bookings to show at the moment";

@@ -45,7 +45,7 @@ if ($query->num_rows > 0) {
 $i=0;
     while($query->num_rows>$i) {
 
-        switch ($row){
+        switch ($row['booking_status']){
             case '0':
                 $_SESSION['bookingstatus']="Awaiting Response";
                 break;

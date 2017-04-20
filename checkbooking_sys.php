@@ -60,7 +60,7 @@ if ($query->num_rows > 0) {
     else{
         echo'I fucked up';
     }
-    echo'<tr><td colspan="8"><input type="submit">Submit</input></td></tr>
+    echo'<tr><td colspan="8"><input type="submit"></input></td></tr>
 </form>
 </table>';
 

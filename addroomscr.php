@@ -22,7 +22,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
 
 
     if ($conn->query($query) === TRUE) {
-        header("Location:addroom.php");
+        header("Location: index.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

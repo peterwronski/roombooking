@@ -12,7 +12,7 @@
                         $('button#registerbtn').on('click',function(){
                             $('#register').fadeIn();
                         });
-                        window.location = "index.php#register"
+                        window.location = "#register"
                     });
                 </script>
 
@@ -25,7 +25,7 @@
                     </tr>
 
                     <tr><td  class="logintable" colspan="2" align="center"><input type="submit" name="login-submit"/></form></td></tr>
-                <tr><td  class="logintable" colspan="2" align="center"><form action="#register"><button id="registerbtn">Click here to register</button></form></td></tr>
+                <tr><td  class="logintable" colspan="2" align="center"><button id="registerbtn">Click here to register</button></td></tr>
 
             </table>
         </div>

@@ -31,6 +31,10 @@ if ($_POST['name']=='sysAdmin' || $_POST['name']=='sysadmin' ){// this makes sur
 }*/
 
 
+$studentid = $_POST['studentid'];
+$name = $_POST['name'];
+$password = $_POST['password'];
+
 
 $studentid = $conn->real_escape_string($studentid);
 $name = $conn->real_escape_string($name);

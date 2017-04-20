@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: CG
  * Date: 20/04/2017
- * Time: 00:57
+ * Time: 02:57
  */
 
 include('dbconnect.php');
@@ -22,7 +22,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
 
 
     if ($conn->query($query) === TRUE) {
-        header("Location:index.php#rooms");
+        header("Location:addroom.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

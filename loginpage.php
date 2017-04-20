@@ -6,6 +6,16 @@
 
         <div class="col-lg-6 col-lg-offset-3 loginform">
             <table class="logintable">
+
+                <script>
+                    $(function(){
+                        $('button#registerbtn').on('click',function(){
+                            $('#register').fadeIn();
+                        });
+                        window.location = "index.php#register"
+                    });
+                </script>
+
                 <form action="login.php" method="POST">
                     <tr><td class="logintable"><label><b>Student ID</b></label></td>
                         <td class="logintable"><input type="text" name="studentid" placeholder="Student ID" id="studentid" required/></td>
@@ -15,7 +25,7 @@
                     </tr>
 
                     <tr><td  class="logintable" colspan="2" align="center"><input type="submit" name="login-submit"/></form></td></tr>
-                <tr><td  class="logintable" colspan="2" align="center"><form action="index.php#register"><button id="registerbtn">Click here to register</button></form></td></tr>
+                <tr><td  class="logintable" colspan="2" align="center"><form action="#register"><button id="registerbtn">Click here to register</button></form></td></tr>
 
             </table>
         </div>
@@ -23,14 +33,7 @@
     </div>
     </div>
 
-    <script>
-    $(function(){
-        $('button#registerbtn').on('click',function(){
-            $('#register').fadeIn();
-        });
-        window.location = "index.php#register"
-    });
-    </script>
+
 
     <div class="container" id="register" style="display:none;">
 

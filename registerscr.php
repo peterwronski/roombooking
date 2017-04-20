@@ -5,7 +5,7 @@
  * Date: 20/04/2017
  * Time: 08:47
  */
-
+include ('dbconnect.php');
 /*if (($_POST['password']!=$_POST['password2'])) {// this checks to see if both password fields are a match
     echo'<script type="text/javascript">
         alert("Your passwords aren\'t matching. Please make sure your passwords match before submitting the form.");

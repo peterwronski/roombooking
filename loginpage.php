@@ -26,7 +26,7 @@
     <script>
     $(function(){
         $('a#registerbtn').on('click',function(){
-            $('#register').show();
+            $('#register').fadeIn();
         });
         window.location = "index.php#register"
     });

@@ -30,9 +30,7 @@ if ($_POST['name']=='sysAdmin' || $_POST['name']=='sysadmin' ){// this makes sur
         </script>';
 }*/
 
-$studentid = strip_tags($_POST['studentid']);
-$name = strip_tags($_POST['name']);
-$password = strip_tags($_POST['password']);
+
 
 $studentid = $conn->real_escape_string($studentid);
 $name = $conn->real_escape_string($name);

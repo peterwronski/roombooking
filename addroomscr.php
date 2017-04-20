@@ -18,7 +18,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
     $roomsize = $conn->real_escape_string($roomsize);
     $roomdesc = $conn->real_escape_string($roomdesc);
 
-    $query = "INSERT INTO room (room_id, room_size, room_desc, room_name) VALUES ('$roomid','$roomsize','$roomdesc','$roomname')";
+    $query = "INSERT INTO rooms (room_id, room_size, room_desc, room_name) VALUES ('$roomid','$roomsize','$roomdesc','$roomname')";
 
 
     if ($conn->query($query) === TRUE) {

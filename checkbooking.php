@@ -39,26 +39,29 @@ echo '
         
     </tr>';
 
+
+function assignStatus($row)
+{
+    switch ($row) {
+        case '0':
+            $_SESSION['bookingstatus'] = "Awaiting Response";
+            break;
+        case '1':
+            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+            break;
+        case '2':
+            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+            break;
+        default:
+            $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
+            break;
+    };
+}
 if ($query->num_rows > 0) {
     // output data of each row
 
-    function assignStatus($row)
-    {
-        switch ($row) {
-            case '0':
-                $_SESSION['bookingstatus'] = "Awaiting Response";
-                break;
-            case '1':
-                $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
-                break;
-            case '2':
-                $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
-                break;
-            default:
-                $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
-                break;
-        };
-    }
+
+
 $i=0;
      while($query->num_rows>$i){
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
@@ -69,8 +72,8 @@ $i=0;
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
         assignStatus($row);
-        $i++;
-    };
+        $i++; };
+
 } else {
     echo "No bookings to show at the moment";
 }

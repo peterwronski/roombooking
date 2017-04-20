@@ -51,7 +51,7 @@ if ($query->num_rows > 0) {
 
     switch ($row) {
         case '0':
-            $_SESSION['bookingstatus'] = "Awaiting Response";
+            $_SESSION['bookingstatus'] = "<p>Awaiting Response</p>";
             break;
         case '1':
             $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
@@ -60,7 +60,7 @@ if ($query->num_rows > 0) {
             $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
             break;
         default:
-            $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
+            $_SESSION['bookingstatus'] = '<p>Looks like something is wrong with your booking.</p>';
             break;
     };
 

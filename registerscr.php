@@ -46,7 +46,7 @@ $check_studentid = $conn->query("SELECT student_id FROM user WHERE student_id='$
 $count=$check_studentid->num_rows;
 
 if($count==0){
-    $adduser="INSERT INTO user(student_id, name, pword) VALUES('$student_id','$name','$hashAndSalt')";
+    $adduser="INSERT INTO users(student_id, name, pword) VALUES('$studentid','$name','$hashAndSalt')";
     if($conn->query($adduser) === TRUE){
         echo'USER REGISTERED';
     }

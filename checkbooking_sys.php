@@ -39,13 +39,13 @@ if ($query->num_rows > 0) {
     while($row=$query->fetch_assoc()) {
 
         echo "<tr><td  class=\"rooms\">" . $row['book_id'] .
-            "<td  class=\"rooms\">" . $row['student_id'] .
+            "</td><td  class=\"rooms\">" . $row['student_id'] .
             "</td><td class=\"rooms\">" . $row['room_id'] .
             "</td><td class=\"rooms\">". $row['room_name'] .
             "</td><td class=\"rooms\">". $row['booktime'] .
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
-            '</td><td class=\"rooms\"> <form method="POST"><select id="bookingstatusadmin" selected='.$row['booking_status'].'> <option value="0">Awaiting Approval</option>
+            '</td><td class=\"rooms\"> <form method="POST"><select name="bookingstatusadmin" selected='.$row['booking_status'].'> <option value="0">Awaiting Approval</option>
                                                                    <option value="1">Approve</option>
                                                                    <option value="2">Deny</option></select></td></tr>';
 

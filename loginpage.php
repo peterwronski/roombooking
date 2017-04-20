@@ -14,9 +14,9 @@
                         <td class="logintable"><input type="password" name="password" id="password" required/></td>
                     </tr>
 
-                    <tr><td  class="logintable" colspan="2" align="center"><input type="submit" name="login-submit"/></td></tr>
+                    <tr><td  class="logintable" colspan="2" align="center"><input type="submit" name="login-submit"/></form></td></tr>
                     <tr><td  class="logintable" colspan="2" align="center"><button id="registerbtn">Click here </button> to register</td></tr>
-                </form>
+
             </table>
         </div>
     </div>

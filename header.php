@@ -115,7 +115,7 @@
                             <li><a href="checkbooking_sys.php">Manage Bookings</a></li>
                          </ul> 
                           </li>';
-                }
+                };
 
                 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
                     echo'<p class="navbar-text">Welcome ' .$_SESSION['userloggedin'] .'</p></li>

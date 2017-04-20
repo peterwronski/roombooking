@@ -52,6 +52,12 @@ if ($query->num_rows > 0) {
         $bookingstatusadmin=$_POST['bookingstatusadmin'];
         $updatestatus="UPDATE booking SET booking_status='$bookingstatusadmin' WHERE book_id='$bookid'";
         $conn->query($updatestatus);
+        if ($conn->query($updatestatus) === TRUE){
+            echo'<h1>The thing worked</h1>';
+        }
+        else{
+            echo'I fucked up';
+        }
     };
     echo'<tr><td colspan="8"><input type="submit">Submit</input></td></tr>
 </form>

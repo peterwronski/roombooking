@@ -22,7 +22,11 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
 
 
     if ($conn->query($query) === TRUE) {
-        header("Location: index.php");
+        echo'<script type="text/javascript">
+    alert("Room created.");
+
+    window.location = "addroom.php"
+</script>';
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

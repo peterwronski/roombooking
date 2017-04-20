@@ -35,7 +35,9 @@ echo '<table class="logintable">
          
     </div>
 </div>
+
         ';
+     $conn->close();
      include ('checkbooking.php');
 
 }

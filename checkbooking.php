@@ -38,20 +38,7 @@ if ($query->num_rows > 0) {
 
      while($row=mysqli_fetch_assoc($query)){
 
-         switch ($row) {
-             case '0':
-                 $_SESSION['bookingstatus'] = "Awaiting Response";
-                 break;
-             case '1':
-                 $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
-                 break;
-             case '2':
-                 $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
-                 break;
-             default:
-                 $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
-                 break;
-         };
+
 
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
              "</td><td class=\"rooms\">" . $row['room_id'] .
@@ -61,6 +48,21 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
          };
+
+    switch ($row) {
+        case '0':
+            $_SESSION['bookingstatus'] = "Awaiting Response";
+            break;
+        case '1':
+            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-ok"></span>APPROVED</p> ';
+            break;
+        case '2':
+            $_SESSION['bookingstatus'] = '<p><span class="glyphicon glyphicon-remove"></span>DENIED</p> ';
+            break;
+        default:
+            $_SESSION['bookingstatus'] = 'Looks like something is wrong with your booking.';
+            break;
+    };
 
 } else {
     echo "No bookings to show at the moment";

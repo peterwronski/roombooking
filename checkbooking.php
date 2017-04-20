@@ -64,6 +64,7 @@ if ($query->num_rows > 0) {
 
 $i=0;
      while($query->num_rows>$i){
+         assignStatus($row);
         echo "<tr><td  class=\"rooms\">" . $row['student_id'] .
              "</td><td class=\"rooms\">" . $row['room_id'] .
              "</td><td class=\"rooms\">". $row['room_name'] .
@@ -71,7 +72,7 @@ $i=0;
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
-        assignStatus($row);
+
         $i++; };
 
 } else {

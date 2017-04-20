@@ -26,6 +26,7 @@
         $('a#registerbtn').on('click',function(){
             $('#register').show();
         });
+        window.location = "index.php#register"
     });
     </script>
 

@@ -20,7 +20,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
 
     $query = "INSERT INTO room (room_id, room_size, room_desc, room_name) VALUES ('$roomid','$roomsize','$roomdesc','$roomname')";
 
-
+    echo $roomid .'br/>' .$roomname .'br/>' .$roomsize .'br/>' .$roomdesc .'br/>';
     if ($conn->query($query) === TRUE) {
         echo'<script type="text/javascript">
     alert("Room created.");

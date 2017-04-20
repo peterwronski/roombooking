@@ -75,5 +75,5 @@ $i=0;
 }
 echo '</table>';
 $conn->close();
-*/
+
 ?>

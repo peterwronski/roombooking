@@ -16,7 +16,7 @@
         <h1>Create an account</h1>
         <div class="col-lg-4 col-lg-offset-4 loginform">
             <table class="logintable">
-                <form action="register.php" method="POST">
+                <form action="registerscr.php" method="POST">
                     <tr><td class="logintable"><label><b>Student ID</b></label></td>
                         <td class="logintable"><input type="text" name="studentid" placeholder="Student ID" id="studentid" required/></td>
                     </tr>

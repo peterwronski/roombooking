@@ -47,7 +47,9 @@ if ($query->num_rows > 0) {
             "</td><td class=\"rooms\">". $row['spec_req'] .
             '</td><td class=\"rooms\"> <form method="POST"><select id="bookingstatusadmin"> <option value="0">Awaiting Approval</option>
                                                                    <option value="1">Approve</option>
-                                                                   <option value="2">Deny</option></select></td></tr>';
+                                                                   <option value="2">Deny</option></select></td></tr>
+                                                                   <tr><td colspan="8"><input type="submit">Submit</input></td></tr>
+                                                                   </form>';
         $bookid=$row['book_id'];
         $bookingstatusadmin=$_POST['bookingstatusadmin'];
         $updatestatus="UPDATE booking SET booking_status='$bookingstatusadmin' WHERE book_id='$bookid'";
@@ -55,7 +57,7 @@ if ($query->num_rows > 0) {
     };
 
 } else {
-    echo "No bookings to show at the moment";
+    echo "<p>No bookings to show at the moment</p>";
 }
-echo '</table>';
+
 $conn->close();

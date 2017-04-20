@@ -68,7 +68,7 @@ $i=0;
             "</td><td class=\"rooms\">". $row['bookdate'] .
             "</td><td class=\"rooms\">". $row['spec_req'] .
             "</td><td class=\"rooms\">" .$_SESSION['bookingstatus'] .'</td></tr>';
-        assignStatus($row['bookingstatus']);
+        assignStatus($row);
         $i++;
     };
 } else {

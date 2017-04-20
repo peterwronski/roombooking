@@ -108,13 +108,14 @@
             <ul class="nav navbar-nav navbar-right">
                 <?php
                 if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
-                echo'<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN MENU
+                    echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN MENU
         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="addroom.php">Add Room</a></li>
                             <li><a href="checkbooking_sys.php">Manage Bookings</a></li>
                          </ul> 
                           </li>';
+                }
 
                 if (isset($_SESSION['userloggedin'])&&(($_SESSION['userloggedin']) == true)) {
                     echo'<p class="navbar-text">Welcome ' .$_SESSION['userloggedin'] .'</p></li>

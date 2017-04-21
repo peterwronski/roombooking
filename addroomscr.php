@@ -24,17 +24,13 @@ include('dbconnect.php');
 
 
     if ($conn->query($query) === TRUE) {
-
         echo '<script type="text/javascript">
-
-
     alert("Room created.");
-
     window.location = "addroom.php"
-</script>';
+              </script>';
     }
     else{
-        $errormsg="Error: " . $sql . "<br>" . $conn->error;;
+        $errormsg="Error: " . $sql . "<br>" . $conn->error;
     echo '<script type="text/javascript">
     alert('.$errormsg.'); 
     window.location = "addroom.php" ';

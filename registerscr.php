@@ -6,7 +6,7 @@
  * Time: 08:47
  */
 include ('dbconnect.php');
-/*if (($_POST['password']!=$_POST['password2'])) {// this checks to see if both password fields are a match
+if (($_POST['password']!=$_POST['password2'])) {// this checks to see if both password fields are a match
     echo'<script type="text/javascript">
         alert("Your passwords aren\'t matching. Please make sure your passwords match before submitting the form.");
 
@@ -28,7 +28,7 @@ if ($_POST['name']=='sysAdmin' || $_POST['name']=='sysadmin' ){// this makes sur
 
     window.location = "index.php#loginpage"
         </script>';
-}*/
+};
 
 
 $studentid = $_POST['studentid'];

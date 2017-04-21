@@ -34,6 +34,7 @@ if($count == 0){
               </script>';
     }
     else{
+    echo $count;
    echo '<script type="text/javascript">
     alert("Room ID already taken. Try a different one."); 
     window.location = "addroom.php" ';

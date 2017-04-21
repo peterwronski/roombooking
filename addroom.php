@@ -32,7 +32,7 @@ if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin'){
 }
 
 else{
-    echo'<h1> You ain\'t supposed to be here';
+    echo'<h1> You ain\'t supposed to be here</h1>';
 }
 
 

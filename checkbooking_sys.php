@@ -8,10 +8,10 @@
 
 session_start();
 include('header.php');
-<div class="container" id="checkbookingadmin">
+echo' <div class="container" id="checkbookingadmin">
 <hr/>
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 contentbox">
+        <div class="col-lg-8 col-lg-offset-2 contentbox">';
 
 if (isset($_SESSION['userloggedin'])&&$_SESSION['userloggedin'] == 'sysAdmin') {
     include('dbconnect.php');

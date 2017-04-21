@@ -30,10 +30,10 @@ include('dbconnect.php');
               </script>';
     }
     else{
-       //$conn->error;
+       $errormsg = $conn->error;
 
    echo '<script type="text/javascript">
-    alert('.$conn->error .'); 
+    alert('.$errormsg .'); 
     window.location = "addroom.php" ';
 };
 

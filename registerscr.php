@@ -55,7 +55,11 @@ if($count==0){
         </script>';
     }
     else{
-        echo'there\'s been an error';
+        echo' <script type="text/javascript">
+            alert("Something went wrong. Try again.");
+
+    window.location = "index.php#loginpage"
+        </script>';
     }
 }
 else{

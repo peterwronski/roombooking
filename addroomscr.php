@@ -30,10 +30,10 @@ include('dbconnect.php');
               </script>';
     }
     else{
-       $errormsg = $conn->error;
+
 
    echo '<script type="text/javascript">
-    alert('.$errormsg .'); 
+    alert("Room ID already taken. Try a different one."); 
     window.location = "addroom.php" ';
 };
 

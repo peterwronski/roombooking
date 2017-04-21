@@ -34,10 +34,10 @@ include('dbconnect.php');
 </script>';
     }
     else{
+        $errormsg="Error: " . $sql . "<br>" . $conn->error;;
     echo '<script type="text/javascript">
-    alert(';
-    echo "Error: " . $sql . "<br>" . $conn->error;
- echo'window.location = "addroom.php" ';
+    alert('.$errormsg.'); 
+    window.location = "addroom.php" ';
 };
 
 $conn->close();

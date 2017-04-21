@@ -43,7 +43,7 @@ if($count==0){
 
     alert("Booking created. You can check the status of your booking now.");
 
-    window.location = "index.php"
+    window.location = "index.php";
 </script>';
         header("Location: index.php");
     }

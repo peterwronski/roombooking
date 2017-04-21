@@ -20,19 +20,25 @@ include('dbconnect.php');
 
     $query = "INSERT INTO room (room_id, room_size, room_desc, room_name) VALUES ('$roomid','$roomsize','$roomdesc','$roomname')";
 
-    echo $roomid .'br/>' .$roomname .'br/>' .$roomsize .'br/>' .$roomdesc .'br/>';
+//$sql=$conn->query($query_selectall);
+
+
     if ($conn->query($query) === TRUE) {
-        echo'<script type="text/javascript">
+
+        echo '<script type="text/javascript">
 
 
     alert("Room created.");
 
     window.location = "addroom.php"
 </script>';
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
+    else{
+    echo '<script type="text/javascript">
+    alert(';
+    echo "Error: " . $sql . "<br>" . $conn->error;
+ echo'window.location = "addroom.php" ';
+};
 
 $conn->close();
-?>
+

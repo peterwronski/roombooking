@@ -40,9 +40,10 @@ if($count==0){
     }
     if ($conn->query($query_insertbooking) === TRUE) {
         echo'<script type="text/javascript">
+
     alert("Booking created. You can check the status of your booking now.");
 
-    window.location = "index.php#booking"
+    window.location = "index.php"
 </script>';
         header("Location: index.php");
     }

@@ -23,6 +23,8 @@ include('dbconnect.php');
     echo $roomid .'br/>' .$roomname .'br/>' .$roomsize .'br/>' .$roomdesc .'br/>';
     if ($conn->query($query) === TRUE) {
         echo'<script type="text/javascript">
+
+
     alert("Room created.");
 
     window.location = "addroom.php"

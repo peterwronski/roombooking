@@ -10,8 +10,8 @@ include('dbconnect.php');
 
 function getRoomByID($id)
 {
-
     $roomInfo = array();
+
     switch ($id) {
         case 1:
             $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
@@ -22,6 +22,8 @@ function getRoomByID($id)
             break;
 
     };
+
+    return $roomInfo;
 
 };
 

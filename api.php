@@ -18,7 +18,8 @@ function getRoomByID($id)
         $roomInfo[] = $row;
     };
 
-    echo json_decode($roomInfo);
+    $roomInfoDecoded = json_decode($roomInfo);
+    echo $roomInfoDecoded;
 
     //return $roomInfo;
 

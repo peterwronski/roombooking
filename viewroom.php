@@ -31,7 +31,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 else // else take the app list
 {
     $roomList = file_get_contents('http://www.bookaroom.azurewebsites.net/api.php?action=getRoomList');
-    $roomList = json_decode($value, true);
+    $roomList = json_decode($roomList, true);
     ?>
     <ul>
         <?php foreach ($roomList as $room): ?>

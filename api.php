@@ -17,7 +17,7 @@ function getRoomByID($id)
 
     $roomInfo = mysqli_fetch_assoc($roomByID_query);
 
-return $roomInfo;
+echo $roomInfo;
 
     /*switch ($id) {
         case 1:

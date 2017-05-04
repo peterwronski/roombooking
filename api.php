@@ -10,7 +10,7 @@ include('dbconnect.php');
 
 function getRoomByID($id)
 {
-    $roomInfo = array();
+    $roomInfo []= array();
 
     $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
 
@@ -19,9 +19,6 @@ function getRoomByID($id)
 
     };
 return $roomInfo;
-
-
-    //return $roomInfo;
 
     /*switch ($id) {
         case 1:

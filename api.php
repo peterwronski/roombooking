@@ -13,11 +13,11 @@ function getRoomByID($id)
     $roomInfo = array();
     switch ($id){
         case 1:
-            $roomInfo = array("Room ID" => "RM01", "Room Name" => "RoomName1", "Room Size" => "5", "Room Desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
+            $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
             break;
 
         case 2:
-            $roomInfo = array("Room ID" => "RM02", "Room Name" => "RoomName2", "Room Size" => "5", "Room Desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
+            $roomInfo = array("room_id" => "RM02", "room_name" => "RoomName2", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
             break;
 
 

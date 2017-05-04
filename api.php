@@ -14,7 +14,7 @@ function getRoomByID($id)
 
     while( $row = mysqli_fetch_row($roomByID_query)){
         $roomInfo[] = $row;
-    }
+    };
 
     return $roomInfo;
 

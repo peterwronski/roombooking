@@ -40,7 +40,7 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
             $value = getRoomList();
             break;
         case "getRoomByID":
-            if (isset($_GET["room_id"]))
+            if (isset($_GET["id"]))
                 $value = getRoomByID($_GET["id"]);
             else
                 $value = "Missing argument";

@@ -26,7 +26,7 @@ function getRoomList()
     //build JSON array
     $roomList_query = 'SELECT room_name, room_size, room_desc FROM room';
 
-    while( $row = mysqli_fetch_row($roomList_query)){
+    while( $row = mysqli_fetch_assoc($roomList_query)){
         $roomInfo = $row;
     }
     return $roomInfo;

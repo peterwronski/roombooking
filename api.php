@@ -11,7 +11,7 @@
 function getRoomByID($id)
 {
     $roomInfo = array();
-    switch ($id) {
+    /*switch ($id) {
         case 1:
             $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
             break;
@@ -20,12 +20,12 @@ function getRoomByID($id)
             $roomInfo = array("room_id" => "RM02", "room_name" => "RoomName2", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
             break;
 
-    }
-            /*$roomByID_query='SELECT room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
+    }*/
+            $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
 
-            while($row = mysqli_fetch_row($roomByID_query)){
+            while($row = mysqli_fetch_assoc($roomByID_query)){
                 $roomInfo[] = $row;
-            };*/
+            };
 
     return $roomInfo;
 }

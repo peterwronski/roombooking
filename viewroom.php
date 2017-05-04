@@ -10,7 +10,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
     ?>
     <table>
         <tr>
-            <td>Room ID: </td><td> <?php echo $roomInfo["room_name"] ?></td>
+            <td>Room ID: </td><td> <?php echo $roomInfo["room_id"] ?></td>
         </tr>
 
         <tr>

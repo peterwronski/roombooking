@@ -15,8 +15,8 @@ function getRoomByID($id)
     $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
 
     $roomInfo []= array();
-    $roomInfo = mysqli_query($roomByID_query);
-    json_encode($roomInfo);
+    $roomInfo = mysqli_fetch_assoc($roomByID_query);
+
 return $roomInfo;
 
     /*switch ($id) {

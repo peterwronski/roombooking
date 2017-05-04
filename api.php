@@ -6,7 +6,7 @@
  * Time: 00:08
  */
 
-
+include('dbconnect.php');
 
 function getRoomByID($id)
 {
@@ -18,8 +18,7 @@ function getRoomByID($id)
         $roomInfo[] = $row;
     };
 
-    $roomInfoDecoded = json_decode($roomInfo);
-    echo $roomInfoDecoded;
+
 
     //return $roomInfo;
 

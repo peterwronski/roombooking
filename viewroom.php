@@ -24,7 +24,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
         </tr>
     </table>
     <br />
-    <a href="bookaroom.azurewebsites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
+    <a href="http://www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
 
     <?php
 }

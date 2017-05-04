@@ -27,11 +27,7 @@ function getRoomByID($id)
                 $roomInfo[] = $row;
             };*/
 
-
-
-
-
-
+    return $roomInfo;
 }
 
 function getRoomList()

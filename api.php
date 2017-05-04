@@ -8,8 +8,7 @@
 
 include('dbconnect.php');
 
-function getRoomByID($id)
-{
+function getRoomByID($id){
     $roomInfo = array();
 
     switch ($id) {
@@ -24,7 +23,6 @@ function getRoomByID($id)
     };
 
     return $roomInfo;
-
 };
 
 function getRoomList()
@@ -34,7 +32,7 @@ function getRoomList()
     $roomList = mysqli_fetch_assoc($roomList_query);
     return $roomList;*/
 
-   echo 'NOPE NOPE NOPE NOPE';
+   return 'NOPE NOPE NOPE NOPE';
 }
 
 $possible_url = array("getRoomByID", "getRoomList");

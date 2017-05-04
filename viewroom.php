@@ -5,7 +5,7 @@
 <?php
 if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomByID")
 {
-    $roomInfo = file_get_contents('http://www.bookaroom.azurewebsites.net/api.php?action=getRoomByID&id=' . $_GET["id"]);
+    $roomInfo = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomByID&id=' . $_GET["id"]);
     $roomInfo = json_decode($roomInfo, true);
     ?>
     <table>
@@ -24,19 +24,19 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
         </tr>
     </table>
     <br />
-    <a href="http://www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
+    <a href="http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
 
     <?php
 }
 else // else take the app list
 {
-    $roomList = file_get_contents('http://www.bookaroom.azurewebsites.net/api.php?action=getRoomList');
+    $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
     $roomList = json_decode($roomList, true);
     ?>
     <ul>
         <?php foreach ($roomList as $room): ?>
             <li>
-                <a href=<?php echo "http://www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "room ID" . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
+                <a href=<?php echo "http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "room ID" . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

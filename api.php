@@ -16,8 +16,8 @@ function getRoomByID($id){
     while($row = mysqli_fetch_array( $getRoomByID_query)){
         $roomInfo = $row; // Inside while loop
     };
-json_encode($roomInfo);
-   echo json_decode($roomInfo);
+
+   var_dump($roomInfo);
     /*switch ($id) {
         case 1:
             $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");

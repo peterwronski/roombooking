@@ -16,8 +16,9 @@ function getRoomByID($id)
 
     while($row = mysqli_fetch_array($roomByID_query)){
         $roomInfo[ $row['room_id']] = $row;
-    };
 
+    };
+return $roomInfo;
 
 
     //return $roomInfo;

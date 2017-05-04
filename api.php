@@ -12,11 +12,10 @@ function getRoomByID($id){
 
     $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
     global $roomInfo;
-    $roomInfo->query($roomByID_query);
+    $roomInfo = mysqli_query($roomByID_query);
 
-while($row=mysqli_fetch_assoc($roomInfo)) {
     echo $roomInfo;
-}
+
     /*switch ($id) {
         case 1:
             $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");

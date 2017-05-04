@@ -6,7 +6,7 @@
 if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomByID")
 {
     $roomInfo = file_get_contents('http://www.bookaroom.azurewebsites.net/api.php?action=getRoomByID&id=' . $_GET["id"]);
-    $roomInfo = json_decode($value, true);
+    $roomInfo = json_decode($roomInfo, true);
     ?>
     <table>
         <tr>

@@ -16,6 +16,7 @@ function getRoomByID($id)
 
     $roomInfo []= array();
     $roomInfo = mysqli_query($roomByID_query);
+    json_encode($roomInfo);
 return $roomInfo;
 
     /*switch ($id) {

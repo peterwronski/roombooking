@@ -25,8 +25,6 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 
 
     <?php
-
-
 }
 else // else take the app list
 {
@@ -34,7 +32,7 @@ else // else take the app list
     $roomList = json_decode($value, true);
     ?>
     <ul>
-        <?php foreach ($value as $room): ?>
+        <?php foreach ($roomList as $room): ?>
             <li>
                 <a href=<?php echo "http://www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "room_" . $room_["room_id"] ?>><?php echo $room["room_name"] ?></a>
             </li>

@@ -7,12 +7,12 @@
  */
 
 include('dbconnect.php');
-
+$roomInfo -> query($roomByID_query);
 function getRoomByID($id){
 
     $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
     global $roomInfo;
-    $roomInfo -> query($roomByID_query);
+
 
     echo $roomInfo;
 

@@ -11,13 +11,12 @@ include('dbconnect.php');
 function getRoomByID($id)
 {
     $roomByID_query='SELECT room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
-    $roomInfo = array();
 
     while( $row = mysqli_fetch_row($roomByID_query)){
         $roomInfo[ $row['room_id']] = $row;
     }
 
-    return $roomInfo;
+
 }
 
 function getRoomList()
@@ -45,7 +44,7 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
             break;
         case "getRoomByID":
             if (isset($_GET["room_id"]))
-                $value = getRoomByID($_GET["room_id"]);
+                $value = getRoomByID($_GET["id"]);
             else
                 $value = "Missing argument";
             break;

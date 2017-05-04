@@ -17,7 +17,7 @@ function getRoomByID($id){
         $roomInfo = $row; // Inside while loop
     };
 
-    echo json_decode($roomInfo);
+   return $roomInfo;
     /*switch ($id) {
         case 1:
             $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");

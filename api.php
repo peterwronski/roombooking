@@ -12,8 +12,9 @@ function getRoomByID($id){
 
     $roomInfo = array();
     $getRoomByID_query = "SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id = $id' ";
-
-    while($row = mysqli_fetch_array( $getRoomByID_query)){
+global $conn;
+$row = $conn->query($getRoomByID_query);
+    while($row = mysqli_fetch_array()){
         $roomInfo = $row; // Inside while loop
     };
 

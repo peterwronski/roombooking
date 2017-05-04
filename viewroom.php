@@ -31,7 +31,7 @@ else // else take the app list
     <ul>
         <?php foreach ($roomList as $room): ?>
             <li>
-                <a href=<?php echo "http://www.bookaroom.azurewebsites.net/REST_Client.php?action=getRoomByID&id=" . $room["id"]  ?> alt=<?php echo "room_" . $room_["room_id"] ?>><?php echo $room["room_name"] ?></a>
+                <a href=<?php echo "http://www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["id"]  ?> alt=<?php echo "room_" . $room_["room_id"] ?>><?php echo $room["room_name"] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

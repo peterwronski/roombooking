@@ -12,7 +12,7 @@ function getRoomByID($id){
 
     $roomInfo = array();
     global $conn;
-    $getRoomByID_query = $conn->query("SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id = $id' ");
+    $getRoomByID_query = $conn->query("SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id = '$id' ");
 
 
     while($row = $getRoomByID_query->fetch_assoc()){

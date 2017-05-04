@@ -20,7 +20,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
         </tr>
     </table>
     <br />
-    <a href="http://www.bookaroom.azurewebites.net/REST_Client.php?action=getRoomList" alt="Room List">Return to the room list</a>
+    <a href="http://www.bookaroom.azurewebites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
     <?php
 }
 else // else take the app list

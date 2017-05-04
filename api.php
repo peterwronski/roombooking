@@ -22,12 +22,9 @@ function getRoomByID($id)
 
 function getRoomList()
 {
-
-
     $roomList_query = 'SELECT room_name, room_size, room_desc FROM room';
 
     while( $row = mysqli_fetch_assoc($roomList_query)){
-
         echo $row;
     }
 

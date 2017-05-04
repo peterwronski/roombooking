@@ -7,8 +7,8 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 {
     $roomInfo = file_get_contents('http://www.bookaroom.azurewebites.net/api.php?action=getRoomByID&id=' . $_GET["id"]);
     $roomInfo = json_decode($roomInfo, true);
-    ?>
-    <table>
+    /*
+    <!-- <table>
         <tr>
             <td>Room Name: </td><td> <?php echo $roomInfo["room_name"] ?></td>
         </tr>
@@ -20,8 +20,13 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
         </tr>
     </table>
     <br />
-    <a href="http://www.bookaroom.azurewebites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
-    <?php
+    <a href="http://www.bookaroom.azurewebites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>-->
+
+
+
+    <?php */
+
+    echo $_GET["action"] .' ' .$_GET["id"];
 }
 else // else take the app list
 {

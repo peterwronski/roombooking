@@ -27,7 +27,9 @@ function getRoomByID($id)
                 $roomInfo[] = $row;
             };*/
 
-            return $roomInfo;
+            echo $roomInfo .' <br/> ' .$id;
+
+
 
 
 }

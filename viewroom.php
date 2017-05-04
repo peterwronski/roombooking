@@ -10,17 +10,17 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
     ?>
     <table>
         <tr>
-            <td>App Name: </td><td> <?php echo $app_info["app_name"] ?></td>
+            <td>Room Name: </td><td> <?php echo $roomInfo["room_name"] ?></td>
         </tr>
         <tr>
-            <td>Price: </td><td> <?php echo $app_info["app_price"] ?></td>
+            <td>Room Size </td><td> <?php echo $roomInfo["room_size"] ?></td>
         </tr>
         <tr>
-            <td>Version: </td><td> <?php echo $app_info["app_version"] ?></td>
+            <td>Desc </td><td> <?php echo $roomInfo["room_desc"] ?></td>
         </tr>
     </table>
     <br />
-    <a href="http://www.bookaroom.azurewebites.net/REST_Client.php?action=getRoomLit" alt="Room List">Return to the room list</a>
+    <a href="http://www.bookaroom.azurewebites.net/REST_Client.php?action=getRoomList" alt="Room List">Return to the room list</a>
     <?php
 }
 else // else take the app list

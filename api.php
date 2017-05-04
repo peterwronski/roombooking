@@ -22,13 +22,13 @@ function getRoomByID($id)
 
 function getRoomList()
 {
-    //normally this info would be pulled from a database.
-    //build JSON array
+
+
     $roomList_query = 'SELECT room_name, room_size, room_desc FROM room';
 
     while( $row = mysqli_fetch_assoc($roomList_query)){
-        $roomInfo = $row;
-        echo $roomInfo;
+
+        echo $row;
     }
 
 

@@ -14,11 +14,11 @@ function getRoomByID($id)
 
     $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
 
-    while($row = mysqli_fetch_array($roomByID_query)){
+    while($row = mysqli_fetch_assoc($roomByID_query)){
         $roomInfo[ $row['room_id']] = $row;
 
     };
-echo $row;
+return $roomInfo;
 
 
     //return $roomInfo;

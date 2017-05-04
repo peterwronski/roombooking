@@ -8,27 +8,27 @@
 
 include('dbconnect.php');
 
-function getRoomByID($id)
-{
+function getRoomByID($id){
+    if($id==null){
+        echo 'ID is null';
+    }
+    else {
+        $roomByID_query = 'SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' . $id;
+        $roomInfo = mysqli_fetch_assoc($roomByID_query);
 
+        echo $roomInfo;
 
-    $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
+        /*switch ($id) {
+            case 1:
+                $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
+                break;
 
+            case 2:
+                $roomInfo = array("room_id" => "RM02", "room_name" => "RoomName2", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
+                break;
+        }*/
 
-    $roomInfo = mysqli_fetch_assoc($roomByID_query);
-
-echo $roomInfo;
-
-    /*switch ($id) {
-        case 1:
-            $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
-            break;
-
-        case 2:
-            $roomInfo = array("room_id" => "RM02", "room_name" => "RoomName2", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
-            break;
-
-    }*/
+    }
 
 };
 

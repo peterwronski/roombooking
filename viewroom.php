@@ -26,8 +26,6 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
     <br />
     <a href="bookaroom.azurewebsites.net/viewroom.php?action=getRoomList" alt="Room List">Return to the room list</a>
 
-
-
     <?php
 }
 else // else take the app list
@@ -38,7 +36,7 @@ else // else take the app list
     <ul>
         <?php foreach ($roomList as $room): ?>
             <li>
-                <a href=<?php echo "www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "room_" . $room_["room_id"] ?>><?php echo $room["room_name"] ?></a>
+                <a href=<?php echo "www.bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "room_" . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

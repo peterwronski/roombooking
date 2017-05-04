@@ -28,8 +28,9 @@ function getRoomList()
 
     while( $row = mysqli_fetch_assoc($roomList_query)){
         $roomInfo = $row;
+        return $roomInfo;
     }
-    return $roomInfo;
+
 
 
 }

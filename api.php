@@ -7,16 +7,12 @@
  */
 
 include('dbconnect.php');
-$roomInfo -> query($roomByID_query);
-function getRoomByID($id){
 
-    $roomByID_query='SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id=' .$id;
-    global $roomInfo;
+function getRoomByID($id)
+{
 
-
-    echo $roomInfo;
-
-    /*switch ($id) {
+    $roomInfo = array();
+    switch ($id) {
         case 1:
             $roomInfo = array("room_id" => "RM01", "room_name" => "RoomName1", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
             break;
@@ -24,15 +20,19 @@ function getRoomByID($id){
         case 2:
             $roomInfo = array("room_id" => "RM02", "room_name" => "RoomName2", "room_size" => "5", "room_desc" => "ROOMDESCRIPTIONROOMDESCRIPTION");
             break;
-    }*/
+
+    };
+
 };
 
 function getRoomList()
 {
-    $roomList_query = 'SELECT room_id, room_name, room_size, room_desc FROM room';
+   /* $roomList_query = 'SELECT room_id, room_name, room_size, room_desc FROM room';
 
     $roomList = mysqli_fetch_assoc($roomList_query);
-    return $roomList;
+    return $roomList;*/
+
+   echo 'NOPE NOPE NOPE NOPE';
 }
 
 $possible_url = array("getRoomByID", "getRoomList");

@@ -42,7 +42,7 @@ function getRoomList()
         array_push($roomList,$row);
     };
 
-    //json_encode($roomList);
+    json_encode($roomList);
 
    var_dump($roomList);
    //return $roomList;

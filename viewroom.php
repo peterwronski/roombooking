@@ -37,12 +37,13 @@ else {
 
     foreach ($roomList_decoded as $room) {
 
-        var_dump($roomList_decoded);/* echo'<li>
+        //var_dump($roomList_decoded);/*
+         echo'<li>
 
                 <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' .$room["room_id"]  .'>' .$room["room_id"] .', ' .$room["room_name"] .'</a>
             </li> ';
         };
-        echo'</ul>'*/;
+        echo'</ul>';
 
     };
 

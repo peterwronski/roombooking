@@ -38,7 +38,7 @@ else
 
     foreach ($roomList_decoded as $room){
 
-        echo $roomList_decoded;
+        var_dump($roomList_decoded);
 
         /* echo'<li>
 

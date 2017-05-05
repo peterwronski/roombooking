@@ -40,7 +40,7 @@ function getRoomList()
     $roomList = $roomList_query->fetch_assoc();
     json_encode($roomList);
 
-   return $roomList;
+   var_dump( $roomList);
 }
 
 $possible_url = array("getRoomByID", "getRoomList");

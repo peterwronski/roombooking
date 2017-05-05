@@ -32,11 +32,11 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 else
 {
     $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
-    $roomList = json_decode($roomList);
+    $roomList_decoded = json_decode($roomList);
 
     echo'<ul>';
 
-    foreach ($roomList as $room){
+    foreach ($roomList_decoded as $room){
              echo'<li>
                 <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' .$room["room_id"]  .'>' .$room["room_id"] .', ' .$room["room_name"] .'</a>
             </li> ';

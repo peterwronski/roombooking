@@ -31,13 +31,13 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 //if(isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomList")
 else {
     $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
-    $roomList_decoded = json_decode($roomList);
+    $roomList = json_decode($roomList);
 
     echo '<ul>';
 
-    foreach ($roomList_decoded as $room) {
+    foreach ($roomList as $room) {
 
-        var_dump($roomList_decoded);/*
+        var_dump($roomList);/*
          //echo'<li>' .$room["room_id"] .'</li>';
 
 

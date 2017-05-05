@@ -34,13 +34,13 @@ if(isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomLi
     $roomList = json_decode($roomList, true);
     ?>
     <ul>
-        <?php foreach ($roomList as $room){ ?>
-            <li>
+        <?php foreach ($roomList as $room){
+             echo'<li>
                 <a href=<?php echo "http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "Room " . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
-            </li>
-        <?php } ?>
-    </ul>
-    <?php
+            </li> ';
+        }
+        echo'</ul';
+
 } ?>
 </body>
 </html>

@@ -28,7 +28,8 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 
     <?php
 }
-if(isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomList")
+//if(isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomList")
+else
 {
     $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
     $roomList = json_decode($roomList, true);

@@ -38,7 +38,7 @@ else
 
     foreach ($roomList as $room){
              echo'<li>
-                <a href=<?php echo "http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "Room " . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
+                <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' . $room["room_id"]  .'alt="Room " '. $room["room_id"] .'>' .$room["room_name"] .'</a>
             </li> ';
         };
         echo'</ul>';

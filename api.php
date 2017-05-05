@@ -37,9 +37,9 @@ function getRoomList()
 {
     global $conn;
     $roomList_query = $conn->query('SELECT room_id, room_name, room_size, room_desc FROM room');
-
+    $roomList = array();
     while($row = $roomList_query->fetch_assoc()){
-        $roomList = $row; // Inside while loop
+        array_push($roomList, $row); // Inside while loop
     };
 
     json_encode($roomList);

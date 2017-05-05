@@ -19,7 +19,7 @@ function getRoomByID($id){
     $roomInfo = $getRoomByID_query->fetch_assoc();
 
 
-json_encode($roomInfo);
+//json_encode($roomInfo);
    return $roomInfo;
     /*switch ($id) {
         case 1:
@@ -42,7 +42,7 @@ function getRoomList()
         $roomList = $row;
     };
 
-    json_encode($roomList);
+    //json_encode($roomList);
 
    //var_dump($roomList);
    return $roomList;

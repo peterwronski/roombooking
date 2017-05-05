@@ -36,9 +36,9 @@ function getRoomByID($id){
 function getRoomList()
 {
     global $conn;
-    $roomList_query = $conn->query('SELECT room_id, room_name, room_size, room_desc FROM room');
+    $roomList_query = ('SELECT room_id, room_name, room_size, room_desc FROM room');
     $roomList = array();
-    while($row = $roomList_query->fetch_assoc()){
+    while($row = mysqli_fetch_assoc($roomList_query)){
         $roomList = $row;
     };
 

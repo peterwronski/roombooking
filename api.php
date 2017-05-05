@@ -57,11 +57,11 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
     switch ($_GET["action"])
     {
         case "getRoomList":
-            $value = getRoomList();
+            getRoomList();
             break;
         case "getRoomByID":
             if (isset($_GET["id"]))
-                $value = getRoomByID($_GET["id"]);
+                getRoomByID($_GET["id"]);
             else
                 $value = "Missing argument";
             break;
@@ -69,5 +69,5 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
 }
 
 //return JSON array
-exit(json_encode($value));
+
 ?>

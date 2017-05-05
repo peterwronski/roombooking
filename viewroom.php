@@ -32,7 +32,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 else
 {
     $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
-    $roomList = json_decode($roomList, true);
+    $roomList = json_decode($roomList);
 
     echo'<ul>';
 

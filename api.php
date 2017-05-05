@@ -34,12 +34,13 @@ json_encode($roomInfo);
 
 function getRoomList()
 {
-   /* $roomList_query = 'SELECT room_id, room_name, room_size, room_desc FROM room';
+    global $conn;
+    $roomList_query = $conn->query('SELECT room_id, room_name, room_size, room_desc FROM room');
 
-    $roomList = mysqli_fetch_assoc($roomList_query);
-    return $roomList;*/
+    $roomList = $roomList_query->fetch_assoc();
+    json_encode($roomList);
 
-   return 'NOPE NOPE NOPE NOPE';
+   return $roomList;
 }
 
 $possible_url = array("getRoomByID", "getRoomList");

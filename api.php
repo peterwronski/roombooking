@@ -65,6 +65,9 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
             else
                 $value = "Missing argument";
             break;
+
+        default:
+            echo 'This function doesn\'t exist';
     }
 }
 

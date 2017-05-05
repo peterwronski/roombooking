@@ -38,10 +38,11 @@ else {
     foreach ($roomList_decoded as $room) {
 
         //var_dump($roomList_decoded);/*
-         echo'<li>
+         echo'<li>' .$room["room_id"] .'</li>';
 
-                <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' .$room["room_id"]  .'>' .$room["room_id"] .', ' .$room["room_name"] .'</a>
-            </li> ';
+
+           /* echo'    <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' .$room["room_id"]  .'>' .$room["room_id"] .', ' .$room["room_name"] .'</a>
+            </li> ';*/
         };
         echo'</ul>';
 

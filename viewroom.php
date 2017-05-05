@@ -28,7 +28,7 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
 
     <?php
 }
-else // else take the app list
+if(isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomList")
 {
     $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
     $roomList = json_decode($roomList, true);
@@ -36,7 +36,7 @@ else // else take the app list
     <ul>
         <?php foreach ($roomList as $room): ?>
             <li>
-                <a href=<?php echo "http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "room ID" . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
+                <a href=<?php echo "http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=" . $room["room_id"]  ?> alt=<?php echo "Room " . $room["room_id"] ?>><?php echo $room["room_name"] ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

@@ -36,11 +36,7 @@ else {
     echo '<ul>';
 
     foreach ($roomList as $room) {
-
-        var_dump($roomList);/*
-         //echo'<li>' .$room["room_id"] .'</li>';
-
-
+          echo'<li>' .$room["room_id"] .'</li>';
            /* echo'    <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' .$room["room_id"]  .'>' .$room["room_id"] .', ' .$room["room_name"] .'</a>
             </li> ';*/
         };

@@ -15,9 +15,10 @@ function getRoomByID($id){
     $getRoomByID_query = $conn->query("SELECT room_id, room_name, room_size, room_desc FROM room WHERE room_id = '$id' ");
 
 
-    while($row = $getRoomByID_query->fetch_assoc()){
-        $roomInfo = $row; // Inside while loop
-    };
+
+    $roomInfo = $getRoomByID_query->fetch_assoc();
+
+
 json_encode($roomInfo);
    return $roomInfo;
     /*switch ($id) {
@@ -37,10 +38,13 @@ function getRoomList()
     global $conn;
     $roomList_query = $conn->query('SELECT room_id, room_name, room_size, room_desc FROM room');
 
-    $roomList = $roomList_query->fetch_assoc();
+    while($row = $roomList_query->fetch_assoc()){
+        $roomList = $row; // Inside while loop
+    };
+
     json_encode($roomList);
 
-   var_dump( $roomList);
+   var_dump($roomList);
 }
 
 $possible_url = array("getRoomByID", "getRoomList");

@@ -29,25 +29,24 @@ if (isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomB
     <?php
 }
 //if(isset($_GET["action"]) && isset($_GET["id"]) && $_GET["action"] == "getRoomList")
-else
-{
+else {
     $roomList = file_get_contents('http://bookaroom.azurewebsites.net/api.php?action=getRoomList');
     $roomList_decoded = json_decode($roomList);
 
-    echo'<ul>';
+    echo '<ul>';
 
-    foreach ($roomList_decoded as $room){
+    foreach ($roomList_decoded as $room) {
 
-        var_dump($roomList_decoded);
-
-        /* echo'<li>
+        var_dump($roomList_decoded);/* echo'<li>
 
                 <a href=http://bookaroom.azurewebsites.net/viewroom.php?action=getRoomByID&id=' .$room["room_id"]  .'>' .$room["room_id"] .', ' .$room["room_name"] .'</a>
             </li> ';
         };
         echo'</ul>'*/;
 
-};
+    };
+
+}
 ?>
 </body>
 </html>

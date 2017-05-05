@@ -44,8 +44,8 @@ function getRoomList()
 
     json_encode($roomList);
 
-   var_dump($roomList);
-   //return $roomList;
+   //var_dump($roomList);
+   return $roomList;
 }
 
 $possible_url = array("getRoomByID", "getRoomList");
